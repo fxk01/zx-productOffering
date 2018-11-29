@@ -1,0 +1,65 @@
+@import "../template/bar1/bar1.wxss";
+.containerbox{
+    background-color: #eae8e8;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    padding:20rpx 20rpx 30rpx;
+}
+
+.searchBox{
+    width:710rpx;
+    height:90rpx;
+    margin:0 auto 10rpx;
+    background-color: #eeeeee;
+    border-radius: 14rpx;
+}
+
+.searchBox image{
+    width:35rpx;
+    height: 35rpx;
+}
+
+.comaskBox{
+    padding-top:36rpx;
+    border-bottom: 2rpx solid #f3f3f3;
+}
+
+.comaskBox:last-child{
+    border-bottom: none;
+}
+
+.comaskBox .ask_img{
+    width:40rpx;
+    height: 40rpx;
+}
+
+.comaskCon{
+    padding:0 20rpx 28rpx 14rpx ;
+}
+
+.comaskCon .comaskTitle{
+    color:#323232;
+    margin-bottom: 16rpx;
+    line-height:44rpx;
+    font-size:33rpx;
+    font-weight:600;
+}
+
+.comaskCon .comaskTxt{
+    color:#909090;
+    font-size: 28rpx;
+    line-height:42rpx;
+}
+
+.dropThumb{
+    padding-top: 10rpx;
+}
+
+.dropThumb .dropmenu{
+    display: block;
+    width:34rpx;
+    height: 20rpx;
+}

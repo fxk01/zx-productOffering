@@ -1,0 +1,17 @@
+.toast-wrap {
+  width: 360rpx;
+  min-height: 110rpx;
+  position: fixed;
+  left: 50%;
+  top: 36%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 14rpx;
+  padding: 20rpx 30rpx;
+  transform: translate(-50%, -50%);
+  z-index: 100; }
+  .toast-wrap .toast-content {
+    text-align: center;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 52rpx;
+  }

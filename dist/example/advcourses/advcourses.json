@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "进阶系列课",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "backgroundColor": "#f8f8f8",
+  "enablePullDownRefresh": true
+}

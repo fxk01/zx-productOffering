@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="deal-thumb stewards_thumb" bindtap="Gofillinformation">
+        <image class="deal-img" src="../images/deal.png" mode="aspectFill"></image>
+    </view>
+    <view class="steHeader">
+        <!--<view class="title">积募合规募集全程服务</view>-->
+        <!--<view class="subTit">4大环节  9项服务</view>-->
+        <!--<view class="subDetail">-->
+            <!--<text>全程服务+管理系统，覆盖产品募集全流程，</text>-->
+            <!--<text>紧跟合规监管要求，涵盖合规募集、双录回访、</text>-->
+            <!--<text>备案管理、信息披露</text>-->
+        <!--</view>-->
+        <image style="width:100%;height:100%;" src="https://wechat.hefupb.com/images/mjhead.jpg"></image>
+    </view>
+    <!--center-->
+    <view class="steCenter">
+        <view class="steContent">
+            <image class="ste_jmsm" src="https://wechat.hefupb.com/images/mjsub_news.jpg"></image>
+            <image class="ste_jmbg" src="https://wechat.hefupb.com/images/mjbg.png"></image>
+        </view>
+    </view>
+    <view class="block_blank"></view>
+
+
+    <!--footer-->
+    <import src="../template/two_footer/two_footer.wxml" />
+    <template is="two_footer"/>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '立即试用',btnClass:'stewards_consult'}}"/>-->
+
+</view>

@@ -1,0 +1,7 @@
+<template name="allBom">
+    <view class="allbomBox">
+        <view class="serviceLine" bindtap="makePhonecall">服务热线：400-666-2398</view>
+        <view class="workingday"> 工作日：8:30 - 17:30 </view>
+        <image src="../images/bomBig.png" mode="aspectFit"></image>
+    </view>
+</template>

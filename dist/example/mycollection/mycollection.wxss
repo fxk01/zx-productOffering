@@ -1,0 +1,17 @@
+@import "../haveActive/haveActive.wxss";
+@import "../buyCourse/buyCourse.wxss";
+@import "../dryGoods/dryGoods.wxss";
+@import "../template/tabarTwo/tabarTwo.wxss"; /*底部导航栏*/
+
+.mycollect_Wrap{
+    background-color:#f1f1f1;
+    min-height: 100vh;
+}
+
+.advContent{
+    line-height: 38rpx;
+}
+
+.disable-box{
+    background-color: #eaeaea;
+}

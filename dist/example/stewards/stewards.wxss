@@ -1,0 +1,85 @@
+@import "../template/two_footer/two_footer.wxss";
+@import "../template/bar1/bar1.wxss";
+.container{
+    line-height: normal;
+    position: relative;
+}
+
+.container .steHeader{
+    /*position: relative;*/
+    height: 450rpx;
+    /*background-color: lightblue;*/
+    /*color:#fff;*/
+    text-align: center;
+}
+
+.steHeader .title{
+    padding-top:90rpx;
+    padding-bottom: 18rpx;
+    font-size: 60rpx;
+    font-weight: 600;
+}
+
+.steHeader .subTit{
+    font-size: 30rpx;
+    padding-bottom: 8rpx;
+}
+
+.steHeader .subDetail{
+    line-height: 40rpx;
+    font-size: 24rpx;
+}
+
+.steHeader .subDetail text{
+    display: block;
+}
+
+.steHeader .hea_block{
+    position: absolute;
+    width:720rpx;
+    height: 70rpx;
+    bottom: 0;
+    left:15rpx;
+    background-color: #fcfdff;
+    z-index: 9;
+}
+
+.block_blank{
+    background-color: #dfe1e9;
+    width: 100%;
+    height: 4508rpx;
+}
+
+.container .steCenter{
+    position: relative;
+     background-color: #dfe1e9;
+     padding:0 10rpx 26rpx;
+ }
+
+.steContent{
+    position: absolute;
+    top:-70rpx;
+    left:50%;
+    margin-left:-48.6%;
+    width:97.2%;
+    background-color: #fff;
+    /*padding-top: 30rpx;*/
+}
+
+.container .steCenter image{
+   width: 100%;
+}
+
+.container .steCenter .ste_jmsm{
+    /*height: 710rpx;*/
+    height: 1181rpx;
+}
+
+.container .steCenter .ste_jmbg{
+    /*height: 2942rpx;*/
+    height: 3412rpx;
+}
+
+
+
+

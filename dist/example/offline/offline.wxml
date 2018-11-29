@@ -1,0 +1,39 @@
+<view class="container">
+    <import src="../wxParse/wxParse.wxml"/>
+    <import src="../template/loadmore/loadmore.wxml" />
+    <image class="free_header" src="https://wechat.hefupb.com/images/outline_bg.png"></image>
+    <view class="offline_center">
+        <view class="header_box">
+            <view class="con_head">
+                <image src="../images/tab-icon3.png"></image>
+                <text>线下私享会</text>
+            </view>
+        </view>
+        <!--一-->
+        <block wx:for="{{offlineItem}}" wx:key="{{index}}" wx:for-item="offlineItem">
+            <view class="flex flex-align-center center_box" data-id="{{offlineItem.id}}" bindtap="GoofflineDetail">
+                <image class="cenL_img" src="{{offlineItem.miu}}"></image>
+                <view class="flex-1 cenR">
+                    <view class="cenR_title">{{offlineItem.title}}</view>
+                    <!--<view class="cenR_detail">-->
+                        <!--{{offlineItem.content}}-->
+                    <!--</view>-->
+                    <view class="cenR_detail">
+                        <template is="wxParse" data="{{wxParseData:replyTemArray[index]}}"/>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <view>
+            <template is="zan-loadmore" data="{{...zanObj}}" />
+        </view>
+    </view>
+
+    <!--引用公共底部-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <import src="../template/tabarTwo/tabarTwo.wxml" />
+    <template is="tabar_two" />
+</view>

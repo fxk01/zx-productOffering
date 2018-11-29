@@ -1,0 +1,81 @@
+
+.haveActive_Wrap{
+    line-height: normal;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+}
+
+.activeBox{
+    background-color: #fff;
+    border-top: 2rpx solid #f1f1f1;
+    padding: 20rpx 20rpx;
+    /*padding: 20rpx 30rpx;*/
+}
+
+.haveL{
+    text-align: right;
+    color: #3088ff;
+    padding: 20rpx 6rpx 20rpx 0;
+    border-radius: 10rpx;
+    border: 4rpx solid #3088ff;
+    width: 94rpx;
+    height: 60rpx;
+}
+
+.haveL_date{
+    font-weight: bold;
+    font-size: 36rpx;
+    margin-bottom: 12rpx;
+}
+
+.haveL_year{
+    font-size: 24rpx;
+}
+
+.haveR{
+    padding-left: 38rpx;
+}
+
+.acTitle{
+    /*padding-top: 8rpx;*/
+    font-weight: bold;
+    font-size: 32rpx;
+    color: #161616;
+}
+
+.acBottom{
+    font-size: 24rpx;
+    color: #909090;
+    padding-top: 20rpx;
+}
+
+.acBottom image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 4rpx;
+}
+
+.acBottom .location{
+    max-width: 242rpx;
+    padding-right: 20rpx;
+}
+
+.timer{
+    padding-right: 20rpx;
+}
+
+/*活动已结束*/
+.disable-box .haveL{
+    border:2rpx solid #909090;
+    color:#909090 ;
+}
+
+.disable-box .acTitle{
+    color:#909090 ;
+}
+
+.end{
+    padding: 4rpx 10rpx;
+    border:2rpx solid #909090;
+    border-radius: 4rpx;
+}

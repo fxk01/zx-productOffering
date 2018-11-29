@@ -1,0 +1,38 @@
+.container{
+    min-height: 100vh;
+}
+
+image{
+    display: block;
+    width:100%;
+    margin:0 auto 40rpx;
+}
+
+.consultBox{
+    position: fixed;
+    z-index: 999;
+    bottom:0;
+    left:0;
+    background-color: #fff;
+    height: 126rpx;
+    width:100%;
+}
+
+.consultBox:after{
+    border:none;
+    border: 0;
+}
+
+.consultBox .consult_txt{
+    border-radius: 10rpx;
+    position: absolute;
+    left:20rpx;
+    bottom:14rpx;
+    text-align: center;
+    width:710rpx;
+    height: 90rpx;
+    background-color: #0078ff;
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 90rpx;
+}

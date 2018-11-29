@@ -1,0 +1,71 @@
+@import "../wxParse/wxParse.wxss";
+@import "../template/tabarTwo/tabarTwo.wxss"; /*底部导航栏*/
+view{
+    line-height: normal;
+}
+
+.offline_header{
+    border-top: 2rpx solid #f1f1f1;
+    border-bottom: 4rpx solid #f1f1f1;
+    padding: 30rpx 30rpx 26rpx;
+}
+
+.head_title{
+    font-weight: bold;
+    padding-bottom: 30rpx;
+    font-size: 38rpx;
+    color: #323232;
+}
+
+.header_content{
+    font-size: 26rpx;
+    color: #909090;
+}
+
+.headerL image{
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 4rpx;
+}
+
+.headerL .location{
+    max-width: 342rpx;
+    padding-right: 20rpx;
+}
+
+.headerR{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-size:26rpx;
+    color:#909090;
+
+}
+
+.headerR image{
+    width: 34rpx;
+    height: 34rpx;
+    margin-right: 12rpx;
+}
+
+/*图片*/
+.offline_bgBox{
+    border-bottom: 4rpx solid #f1f1f1;
+    margin: 20rpx auto;
+    width: 698rpx;
+    height: 280rpx;
+}
+
+.offline_bgBox image{
+    width: 100%;
+    height: 100%;
+}
+
+/*main*/
+.offline_main{
+    /*font-size: 26rpx;*/
+    /*color:#3f3f3f;*/
+    /*line-height: 42rpx;*/
+    min-height: 500rpx;
+    padding: 0 30rpx;
+}

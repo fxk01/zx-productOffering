@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "私研社",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "backgroundColor": "#f8f8f8",
+  "enablePullDownRefresh": true
+}

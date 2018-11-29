@@ -1,0 +1,68 @@
+<view hidden="{{payStatus=='0' || payStatus=='1'}}" class="orderInfoWrap">
+    <view class="orderInfo_title">订单信息</view>
+    <view class="orderInfo_box">
+        <view class="orderInfo_branch">
+            <text class="branchName">商品名称：</text>
+            <text class="branchValue">{{payInfo.product}}</text>
+        </view>
+        <view class="orderInfo_branch">
+            <text class="branchName">订单编号：</text>
+            <text class="branchValue">{{payInfo.orderid}}</text>
+        </view>
+        <view class="orderInfo_branch">
+            <text class="branchName">商家名称：</text>
+            <text class="branchValue">{{payInfo.shops}}</text>
+        </view>
+        <view class="orderInfo_branch">
+            <text class="branchName">支付金额</text>
+            <text class="branchValue">￥{{payInfo.amount}}元</text>
+        </view>
+    </view>
+
+    <view class="orderInfo_title">选择支付方式</view>
+    <view class="dir_account">直接到账</view>
+    <view class="btnBox">
+        <!--<button class="payBtn" catchtap="requestPaymentFn">微信支付</button>-->
+        <button class="payBtn" open-type="getUserInfo" style="" bindgetuserinfo="requestPaymentNewFn">微信支付</button>
+    </view>
+    <!--<view class="helpView">关于微擎\n 微擎帮助</view>-->
+</view>
+
+        <!--购买成功-->
+<view wx:if="{{payStatus=='1'?true:false}}" class="successBox">
+    <view class="success_Result">
+        <image src="../images/result_success1.png" class="result_Img"></image>
+        <view class="result_Txt">购买成功</view>
+    </view>
+    <button class="resultBtn" catchtap="returnFn">立即听课</button>
+</view>
+
+        <!--购买失败-->
+<view wx:elif="{{payStatus=='0'?true:false}}" class="loserBox">
+    <view class="loser_Result">
+        <image src="../images/result_lose.png" class="result_loser_Img"></image>
+        <view class="result_Txt">支付失败</view>
+    </view>
+    <button class="resultBtn" catchtap="requestPaymentFn">继续支付</button>
+    <button class="resultBtn backBtn" catchtap="returnFn">返回</button>
+</view>
+
+        <!--&lt;!&ndash;购买成功&ndash;&gt;-->
+<!--<view wx:if="{{payStatus=='1'?true:false}}" class="successBox">-->
+<!--<view class="success_Result">-->
+    <!--<image src="../images/result_success1.png" class="result_Img"></image>-->
+    <!--<view class="result_Txt">购买成功</view>-->
+    <!--<view style="color:#909090;font-size:26rpx;padding-top:10rpx;">我们会尽快给您发货！</view>-->
+<!--</view>-->
+<!--<button class="resultBtn" catchtap="godryGoodsPage">查看更多积募干货资料</button>-->
+<!--</view>-->
+
+<!--&lt;!&ndash;购买失败&ndash;&gt;-->
+<!--<view wx:elif="{{payStatus=='0'?true:false}}" class="loserBox">-->
+<!--<view class="loser_Result">-->
+    <!--<image src="../images/result_lose.png" class="result_loser_Img"></image>-->
+    <!--<view class="result_Txt">支付失败</view>-->
+<!--</view>-->
+<!--<button class="resultBtn payLoser" catchtap="payFn">继续支付</button>-->
+<!--<button class="resultBtn backBtn" catchtap="returnFn">返回</button>-->
+<!--</view>-->

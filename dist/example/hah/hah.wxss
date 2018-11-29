@@ -1,0 +1,51 @@
+.main_tabTop{
+    border-bottom:2rpx solid #f1f1f1;
+    height: 98rpx;
+}
+.tabTxt{
+    font-size: 30rpx;
+    line-height: 96rpx;
+    text-align: center;
+    color: #909090;
+    font-weight: bold;
+}
+
+.tabTxt_active{
+    position: relative;
+    color: #0078ff;
+    /*border-bottom:4rpx solid #3088ff;*/
+}
+
+.tabTxt_active:after {
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    margin-left: -50rpx;
+    content: '';
+    display: block;
+    width: 100rpx;
+    height: 4px;
+    background-color: #3088ff;
+}
+
+/*简介*/
+.introMain{
+    min-height: 400rpx;
+    padding: 20rpx 30rpx;
+}
+
+.flex{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+.box{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+

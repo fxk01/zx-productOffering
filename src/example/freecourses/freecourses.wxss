@@ -1,0 +1,58 @@
+@import "../template/tabarTwo/tabarTwo.wxss";
+@import "../template/loadmore/loadmore.wxss";
+.container{
+    position: relative;
+    min-height: 100vh;
+    line-height: normal;
+    background-color: #eae8e8;
+}
+
+.container .free_header{
+    width: 100%;
+    height: 300rpx;
+}
+
+.free_conter{
+    background-color: #fff;
+    padding:0 25rpx;
+}
+
+.free_conter .con_head{
+    color:#393939;
+    line-height: 90rpx;
+    font-size:36rpx;
+    border-bottom: 2rpx solid #eae8e8 ;
+}
+
+.free_conter .con_head image{
+    width:26rpx;
+    height: 25rpx;
+    margin-right: 12rpx;
+}
+
+.free_conter .con_content{
+    /*margin-bottom: 210rpx;*/
+}
+.con_content .listbox{
+    position: relative;
+    padding-left: 38rpx;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    color: #161616;
+}
+.con_content .listbox .new_img{
+    position: absolute;
+    left:0;
+    top:14rpx;
+    width:31rpx;
+    height: 40rpx;
+    animation:slides 0.64s infinite 0s;
+}
+
+.con_content .listbox .textL{
+    max-width: 410rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

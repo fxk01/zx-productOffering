@@ -1,0 +1,51 @@
+<template name="two_footer">
+    <view class="footer">
+        <view class="foot_handle">
+            <view class="fooTit">办理流程</view>
+            <view class="fooDetail">简单四步  其他的交给积募完成</view>
+            <view class="fooProcess">
+                <image class="fooLine"></image>
+                <view class="flex">
+                    <view class="flex flex-col flex-1 flex-align-center">
+                        <view class="pro_numbox">
+                            <text class="pro_number">1</text>
+                        </view>
+                        <view class="pro_txt">点击“立即办理”</view>
+                    </view>
+
+                    <view class="flex flex-col flex-1 flex-align-center">
+                        <view class="pro_numbox">
+                            <text class="pro_number">2</text>
+                        </view>
+                        <view class="pro_txt">填写申请资料</view>
+                    </view>
+
+                    <view class="flex flex-col flex-1 flex-align-center">
+                        <view class="pro_numbox">
+                            <text class="pro_number">3</text>
+                        </view>
+                        <view class="pro_txt">专人对接服务</view>
+                    </view>
+
+                    <view class="flex flex-col flex-1 flex-align-center">
+                        <view class="pro_numbox">
+                            <text class="pro_number">4</text>
+                        </view>
+                        <view class="pro_txt">全程跟踪办理</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="footprofile">
+            <view class="fooTit">积募简介</view>
+            <view class="fileContop">
+                <view>积募是上海合富金融信息服务有限公司旗下的独立第三方服务平台。</view>
+                <view>致力于为机构提供全周期行政外包服务，提供全流程发行运营服务，为从业者提供全体系职业培训服务等一站式服务体系，化繁为简聚焦投研，增强基金竞争力。</view>
+            </view>
+            <view class="fileConbom">
+                <text>公司成员拥有在中信、海通、平安、海富通、Citco、HSBC、Macquarie等大型金融机构的资深从业背景，汇集海内外优秀基金行政服务专业人才，具有丰富的基金运营与服务经验，已累计服务上千家机构。</text>
+            </view>
+        </view>
+    </view>
+</template>

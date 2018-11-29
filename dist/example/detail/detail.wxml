@@ -1,0 +1,22 @@
+<view>
+    <view class="content">
+        <view class="deil_title">60分钟破解营改增难题</view>
+        <view class="deil_timer">2017-9-2</view>
+        <image class="deil_bg" src="https://wechat.hefupb.com/images/detail_bg.png"></image>
+        <view class="deil_content">
+            <view class="txt">有道云笔记是网易出品,获得5000万用户青睐的笔记软件。提供了PC端、移动端、网页端等多端应用,用户可以随时随地对线上资料进行编辑、分享以及协同。</view>
+            <view class="txt">有道云笔记是网易出品,获得5000万用户青睐的笔记软件。提供了PC端、移动端、网页端等多端应用,用户可以随时随地对线上资料进行编辑、分享以及协同。</view>
+            <view class="txt">有道云笔记是网易出品,获得5000万用户青睐的笔记软件。提供了PC端、移动端、网页端等多端应用,用户可以随时随地对线上资料进行编辑、分享以及协同。</view>
+        </view>
+
+    </view>
+
+    <!--引用公共底部-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--&lt;!&ndash;boom&ndash;&gt;-->
+    <import src="../template/bar1/bar1.wxml" />
+    <template is="bar1" data="{{btnTxt: '立即听课'}}"/>
+
+</view>

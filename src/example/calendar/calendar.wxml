@@ -1,0 +1,178 @@
+<view class="canlendarBgView">
+    <import src="../wxParse/wxParse.wxml"/>
+    <view class="canlendarView">
+        <view style="background-color: #ffffff;" class="flex box box-tb box-align-center">
+            <view class="calendar box box-tb">
+                <view class="top-handle fs36 box box-lr box-align-center">
+                    <!-- 向前一月 -->
+                    <!--<view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">-->
+                        <!--<view class="prev-handle box box-lr box-align-center box-pack-center"></view>-->
+                    <!--</view>-->
+                    <!-- XX年XX月 -->
+                    <view class="date-area box box-lr box-align-center box-pack-center" style="color: #323232;">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+                    <!-- 向后一月 -->
+                    <!--<view class="next box box-lr" bindtap="handleCalendar" data-handle="next">-->
+                        <!--<view class="next-handle box box-lr box-align-center box-pack-center"></view>-->
+                    <!--</view>-->
+                </view>
+                <view style="background-color: #ffffff;">
+                    <!--<view class="canlendarjibaoBj" style="height:300rpx;">-->
+                        <!--<text class="rilBjtTest">31</text>-->
+                    <!--</view>-->
+                    <view class="canlendarjibaoBj newcanlendarjibaoBj">
+                        <!--../images/canlenderBj.jpg-->
+                        <image style="width:100%;height:100%;" src="{{Bg.image}}"></image>
+                        <text class="rilBjtTest">
+                            <!--{{mouArr[mouArr.length-1].date || '15'}}-->
+                            <!--前端手动做-->{{createMonth[0]}}
+                        </text>
+                        <!--<image class="canlenderSmall" src="../images/canlenderSmall.gif"></image>  //圣诞老人动图-->
+                    </view>
+                    <view class="canlendarjibao">
+                        <!--&lt;!&ndash;年检  适当性自查&ndash;&gt;{{mouArr[mouArr.length-1].title}}-->
+                        {{createMonth[1]}}
+                    </view>
+                </view>
+                <!-- 周一到周日 weeks-->
+                <view class="weeks box box-lr box-pack-center box-align-center">
+                    <view class="grow week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+                </view>
+                <!-- 每月天数 -->
+                <view class="days box box-lr box-wrap">
+                    <!-- 前有多少空格 -->
+                    <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+                    </view>
+                    <!--{{cur_year==2017 && cur_month==11 && index == 24  ? 'cir-bg' : ''}}-->
+                    <view class="grid white-color box box-align-center box-pack-center " wx:for="{{bindObj}}" wx:key="{{index}}">
+                        <!--{{cur_year==2017 && cur_month==11 && (index == 6 || index == 24)  ? 'cir-bg' : ''}} {{cur_year==2017 && cur_month==12 && (index == 6 || index == 7 || index == 11 || index == 19 || index == 21 || index == 30)  ? 'cir-bg' : ''}}-->
+                        <view bindtap="showInfo" data-cur="{{item.curTime}}" data-date="{{item.days}}" class="day box box-pack-center {{index+1==getDays67[0] || index+1==getDays67[1]||index+1==getDays67[2]||index+1==getDays67[3]||index+1==getDays67[4]||index+1==getDays67[5]||index+1==getDays67[6]||index+1==getDays67[7]||index+1==getDays67[8]||index+1==getDays67[9]? 'changeColor': 'othersColor'}} {{item.curDot==true?'cir-bg':''}}" >{{item.days}}</view>
+                        <!-- style= "{{changeColor}}"另一种方法待定 -->
+                    </view>
+                </view>
+                <!-- wx:for=""有后台数据时，item.id是否和所点击的时期匹配 -->
+                <!-- wx:if数据匹配 -->
+                <!--<view id="list-details" wx:if="{{match_data==22 && cur_year==2017 && cur_month==8}}">-->
+                    <!--<view class="information">-->
+                        <!--<image class="tick" src="http://ojmcn9nlw.qnssl.com/blog/20170809/162045913.png?imageslim" ></image>-->
+                        <!--<view class="company">-->
+                            <!--<text class="tips">{{campany}}：{{position}} 微信小程序开始</text>-->
+                            <!--<text class="times">微信时间段: {{start}}--{{end}}</text>-->
+                        <!--</view>-->
+                    <!--</view>-->
+                    <!--<navigator url="" hover-class="none">-->
+                        <!--<text class="detailed">查看详情</text>-->
+                    <!--</navigator>-->
+                <!--</view>-->
+            </view>
+        </view>
+
+
+        <view class="canlendarjibaoBj canTsd">
+            <!--具体事件显示-->
+            <block wx:for="{{mouArr}}" wx:key="{{index}}">
+                <view class="f-flex flex-row flex-align-center caTop">
+                    <view class="canlenTx">
+                        <text style="font-size: 25px; text-align: right;">{{item.date}}<text style="font-size: 16px;">日</text></text>
+                        <text class="tTx9090">{{item.mounth}}月</text>
+                    </view>
+                    <view class="flex-1 canlenTx2">
+                        <!--<view>1.基金从业资格证书有效期在2017年12月31日之前的私募从业人员，需在2017年12月31日前，完成共计30个学时的后续培训。</view>-->
+                        <!--<view>2.根据《证券期货投资者适当性管理办法》，请在年底之前完成每半年一次的适当性自查，并形成自查报告。</view>-->
+                        <!--<text>{{item.content}}</text>-->
+                        <!--含html标签-->
+
+                        <!--<block wx:for="{{replyTemArray}}" wx:key="*this">-->
+                        <view>
+                            <template is="wxParse" data="{{wxParseData:replyTemArray[index]}}"/>
+                        </view>
+                        <!--</block>-->
+                    </view>
+                </view>
+
+            </block>
+            <!--<block wx:for="{{replyTemArray}}" wx:key="*this">-->
+                <!--<view>-->
+                    <!--<template is="wxParse" data="{{wxParseData:item}}"/>-->
+                <!--</view>-->
+            <!--</block>-->
+            <!--<view class="connote">-->
+                <!--<view>另有以下事项需开始准备:-->
+                    <!--<view style="margin-bottom:30rpx;">6月30日 股权投资基金2017年年报，其中合伙型及公司型需做审计报告</view>-->
+                <!--</view>-->
+                <!--<view>如需代办可以拨打"积募服务热线:<text style="color:#1284ff;" catchtap="makePhonecall">4006662398</text>"</view>-->
+            <!--</view>-->
+            <view style=" height: 20px;"></view>
+        </view>
+
+        <!--<view class="container">-->
+            <!--&lt;!&ndash;填写信息&ndash;&gt;-->
+            <!--<view class="info_center">-->
+                <!--<view class="info_title">-->
+                    <!--<text>如果您需要积募温馨提醒</text>-->
+                <!--</view>-->
+                <!--<view class="info_subtitle">-->
+                    <!--<text>任一填写一项即可</text>-->
+                <!--</view>-->
+                <!--<view class="flex2 flex-align-center info_box">-->
+                    <!--<image src="../images/phone_icon.png" style="width:47rpx; height:54rpx;"></image>-->
+                    <!--<input placeholder="微信提醒  请填写“手机号”或“微信号”" class="flex-1" placeholder-class="inp_holder" bindinput="getPhoneRl"/>-->
+                <!--</view>-->
+                <!--<view class="flex2 flex-align-center info_box">-->
+                    <!--<image src="../images/em_icon.png" style="width:54rpx; height:54rpx;"></image>-->
+                    <!--<input placeholder="邮件提醒  请填写“邮箱”" class="flex-1" placeholder-class="inp_holder" bindinput="getEmail"/>-->
+                <!--</view>-->
+                <!--&lt;!&ndash;提示信息&ndash;&gt;-->
+                <!--<view hidden="{{!reminder}}" class="reminder">-->
+                    <!--提示：{{reminder}}-->
+                <!--</view>-->
+
+                <!--<view class="btnBox">-->
+                    <!--<button class="inBtn" disabled="{{!(wxHighlight || emHighlight)|| !emFormat || disabled}}" catchtap="Submit">提交</button>-->
+                <!--</view>-->
+            <!--</view>-->
+            <!--&lt;!&ndash;引用公共底部&ndash;&gt;-->
+            <!--<import src="../template/allbom.wxml" />-->
+        <!--</view>-->
+
+        <!--<view class="opacity_heng"></view>-->
+        <!--<view class="subscribeBox">-->
+            <!--<view class="subscribe_Title">订阅每周温馨提示</view>-->
+            <!--<view class="subscribe_subTitle">私募日历、行业重磅、合规动态实时推送、不会错过！</view>-->
+
+            <!--<view class="subscribe_Content">-->
+                <!--<view class="flex flex-align-center flex-justify-between" style="margin-bottom:12rpx;">-->
+                    <!--<view class="flex flex-align-center subscribe_ContentL">-->
+                        <!--<image mode="aspectFit" class="subscribe_icon subscribe_icon1" src="../images/calendar_rl.jpg"></image>-->
+                        <!--<view>私募合规日历</view>-->
+                    <!--</view>-->
+                    <!--<view class="flex flex-align-center subscribe_ContentR">-->
+                        <!--<image mode="aspectFit" class="subscribe_icon subscribe_icon2" src="../images/calendar_lt.jpg"></image>-->
+                        <!--<view>行业沙龙论坛</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="flex flex-align-center flex-justify-between">-->
+                    <!--<view class="flex flex-align-center subscribe_ContentL">-->
+                        <!--<image mode="aspectFit" class="subscribe_icon subscribe_icon3" src="../images/calendar_jd.jpg"></image>-->
+                        <!--<view>政策深度解读</view>-->
+                    <!--</view>-->
+                    <!--<view class="flex flex-align-center subscribe_ContentR">-->
+                        <!--<image mode="aspectFit" class="subscribe_icon subscribe_icon4" src="../images/calendar_new.jpg"></image>-->
+                        <!--<view>行业重磅新闻</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+            <!--</view>-->
+
+            <!--<form class="subscribe_form" bindsubmit="formSubmit" report-submit="true">-->
+                <!--<view class="box subscribe_block">-->
+                    <!--<button disabled="{{subDisabled}}" class="subscribe_Btn" formType="submit">-->
+                        <!--<image hidden="{{subDisabled}}" class="bell" src="../images/bell.gif"></image>-->
+                        <!--<text class="subscribe_Btntxt">{{subscribeTxt}}</text>-->
+                    <!--</button>-->
+                <!--</view>-->
+            <!--</form>-->
+        <!--</view>-->
+    </view>
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
+</view>

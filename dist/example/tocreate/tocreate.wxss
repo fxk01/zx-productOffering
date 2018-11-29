@@ -1,0 +1,82 @@
+@import "../template/jM_shengxinHead/jM_shengxinHead.wxss";
+@import "../template/two_footer/two_footer.wxss";
+@import "../template/bar1/bar1.wxss";
+.container{
+    position: relative;
+    line-height: normal;
+}
+
+.headCon .headconPosi1 image,.headCon .headconPosi2 image,.headCon .headconChoice image {
+    /*width:48rpx;*/
+    width: 62rpx;
+    height:56rpx;
+}
+
+
+.create_Con{
+    position: relative;
+    background-color: #ede5cf;
+    padding: 334rpx 16rpx 16rpx;
+}
+
+.create_Con .con_class{
+    /*padding-top:34rpx;*/
+    /*padding-bottom: 50rpx;*/
+    /*height: 320rpx;*/
+    padding:0 20rpx 16rpx 34rpx;
+    background-color: #fff;
+    margin-bottom: 16rpx;
+}
+
+.create_Con .con_class1{
+    position: absolute;
+    z-index: 2;
+    top:-34rpx;
+    margin: 0 auto;
+    width: 95.73%;
+}
+
+.con_Title{
+    font-weight: 500;
+    font-size: 38rpx;
+    color:#404040;
+    padding: 38rpx 20rpx 16rpx 0;
+    border-bottom: 2rpx solid #e5e5e5;
+}
+
+.con_Content{
+    min-height: 170rpx;
+    padding-top: 28rpx;
+    padding-bottom: 28rpx;
+}
+
+.create_Con .con_classL{
+    /*width:300rpx;*/
+    /*height: 220rpx;*/
+    width:240rpx;
+    height: 140rpx;
+    margin-left: 30rpx;
+}
+
+.con_class .con_classR{
+    padding-left: 60rpx;
+}
+
+
+.con_classR .con_Txtbox{
+    line-height: 44rpx;
+    font-size: 24rpx;
+    color:#9e9e9e;
+}
+
+.con_Txtbox .con_detail{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.con_Txtbox .con_detail image{
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 18rpx;
+}

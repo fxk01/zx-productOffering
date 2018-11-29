@@ -1,0 +1,48 @@
+@import "../template/tabarTwo/tabarTwo.wxss"; /*底部导航栏*/
+@import "../template/loadmore/loadmore.wxss";
+.grygoodsBox{
+    border-bottom: 2rpx solid #f1f1f1;
+    padding: 30rpx 28rpx;
+}
+
+.goodsL{
+    background-color: #e7e7e7;
+    width: 180rpx;
+    height: 200rpx;
+    border:2rpx solid #d2d2d2;
+}
+
+.goodsL image{
+    width: 100%;
+    height: 100%;
+}
+
+.goodsR{
+    font-size: 26rpx;
+    padding-left: 40rpx;
+}
+
+.goodsR .good_title{
+    font-weight: bold;
+    padding-bottom: 10rpx;
+    font-size: 32rpx;
+    color: #202020;
+}
+
+.goodsR .good_content{
+    line-height: 44rpx;
+    color: #909090;
+}
+
+.goodsR .good_bom{
+    padding-top: 22rpx;
+    color: #1b356f;
+}
+
+.good_bom .bgf{
+    margin-right: 24rpx;
+}
+
+.good_bom .update{
+
+}

@@ -1,0 +1,51 @@
+<import src="../wxParse/wxParse.wxml"/>
+<view class="offline_header">
+
+    <!--miu;//线下私享会&#45;&#45;》targetTime （日期）-->
+    <!--comment; //线下私享会&#45;&#45;》introduce（介绍）-->
+    <!--price;  //线下私享会&#45;&#45;》报名结束：1.00 、立即报名标识：0.00-->
+    <!--period; //线下私享会&#45;&#45;》site （活动地点）-->
+    <!--lecturer; //线下私享会&#45;&#45;》targetTime（时间）-->
+    <view class="head_title">{{mainInfomation.title}}</view>
+    <view class="flex flex-align-center flex-justify-between header_content">
+        <view class="flex flex-align-center headerL">
+            <image src="../images/location.png"></image>
+            <view class="line-clamp1 location">{{mainInfomation.period}}</view>  <!--//活动地点-->
+            <image src="../images/school_time.png"></image>
+            <view class="timer">{{mainInfomation.miu}}</view>   <!--2018.03.16-->
+        </view>
+        <!--<view wx:if="{{mainInfomation.favorite=='0'}}" class="flex headerR" catchtap="proFavoriteFn">-->
+            <!--<image src="../images/school_save_default.png"></image>-->
+            <!--<view>收藏</view>-->
+        <!--</view>-->
+
+        <button wx:if="{{mainInfomation.favorite=='0'}}" open-type="getUserInfo" style="" bindgetuserinfo="proFavoriteFnNew" class="flex headerR button_getUser">
+            <image src="../images/school_save_default.png"></image>
+            <view>收藏</view>
+        </button>
+        <view wx:else class="flex headerR">
+            <image src="../images/school_save_pressed.png"></image>
+            <view>已收藏</view>
+        </view>
+    </view>
+</view>
+<view class="offline_bgBox">
+    <image src="{{mainInfomation.imageNew}}"></image>      <!--背景图-->
+</view>
+
+<!--main-->
+<view class="offline_main">
+<!--{{mainInfomation.description}}-->
+<template is="wxParse" data="{{wxParseData:description_content.nodes}}"/>
+</view>
+
+<loading hidden="{{loadingHidden}}">
+加载中
+</loading>
+
+<!--底部导航栏-->
+<block>
+<import src="../template/tabarTwo/tabarTwo.wxml" />
+<!--<template is="tabar_two" data="{{tabar_two: tabar_two,mainPurchase:'0'}}"/>      &lt;!&ndash;以后删除&ndash;&gt;-->
+<template is="tabar_two" data="{{tabar_two: tabar_two,isIphoneX:isIphoneX,mainPurchase:isEnd}}"/>
+</block>

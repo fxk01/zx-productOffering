@@ -1,0 +1,7 @@
+<template name="jm_header">
+    <view class="jm_header">
+        <image class="jm_headImg" src="../images/comRuk-header.png" mode="aspectFit"></image>
+        <view class="jm_headTit" hidden="{{jMhidden}}">积募  让私募事儿更简单</view>
+        <!--<view class="jm_headTxt">私募基金一站式综合服务平台</view>-->
+    </view>
+</template>

@@ -1,0 +1,78 @@
+<view class="buyCourse_Wrap">
+    <block wx:if="{{myCourseList}}">
+        <!--热点解读课-->
+        <view hidden="{{!hotreadList}}" class="tab3list">
+            <view class="tab3list2_title">
+                <view class="textL">{{hotreadList.name?hotreadList.name:'热点解读课'}}</view>
+            </view>
+            <block wx:for="{{hotreadList.productList}}" wx:key="{{item.id}}">
+                <view class="flex flex-align-center hotreadBox" data-id="{{item.id}}" data-showdetail="2"  data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                    <view class="hotread_L">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 hotread_R">
+                        <view class="hotreadTitle line-clamp2">{{item.title}}</view>
+                        <view>
+                            <text class="hotreadTxt1">主讲人：{{item.lecturer}}</text>
+                            <text class="hotreadTxt1">更新：{{item.updateTime? item.updateTime: item.createTime}}</text> <!--2017.10.12-->
+                            <!--<text class="hotreadTxt1">{{item.time_minute}}{{time_seconds}}</text> &lt;!&ndash;2017.10.12 20:00&ndash;&gt;-->
+                        </view>
+                        <!--<view class="hotreadTxt2">开课时间：2017.10.12  20:00</view>-->
+                    </view>
+                </view>
+            </block>
+        </view>
+
+        <!--进阶系列课-->
+        <view hidden="{{!advList}}" class="tab3list">
+            <view class="flex tab3list3_title">
+                <view class="textL">{{advList.name?advList.name:'进阶系列课'}}</view>
+            </view>
+            <block wx:for="{{advList.productList}}" wx:key="{{item.id}}">
+                <view class="flex flex-align-center advBox" data-id="{{item.id}}" data-showdetail="3"  data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                    <view class="adv_L">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 adv_R">
+                        <view class="advTitle">{{item.title}}</view>
+                        <view class="advContent line-clamp2">{{item.comment}}</view>
+                        <view class="advbom">
+                            <text>讲师：{{item.lecturer}}</text>
+                            <text>共{{item.period}}节课</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+        <!--积募干货-->
+        <view hidden="{{!dryGoodsList}}" class="tab3list">
+            <view class="flex tab3list4_title" style="border-bottom:2rpx solid #f1f1f1;">
+                <view class="textL">{{dryGoodsList.name?dryGoodsList.name:'积募干货'}}</view>
+            </view>
+            <block wx:for="{{dryGoodsList.productList}}" wx:key="{{item.id}}">
+                <view class="flex grygoodsBox" data-id="{{item.id}}" data-BarTitleText="{{item.title}}" catchtap="goDrygoodsdetail">
+                    <view class="goodsL">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 goodsR">
+                        <view class="good_title">{{item.title}}</view>
+                        <view class="good_content line-clamp2">{{item.comment}}</view>
+                        <view class="good_bom">
+                            <text class="bgf">整编：积募</text>
+                            <!--<text class="update">更新：{{item.updateTime}}</text> &lt;!&ndash;2018.1.&ndash;&gt;-->
+                            <text class="update">更新：{{item.updateTime?item.updateTime:item.createTime}}</text> <!--2018.1.-->
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <loading hidden="{{loadingHidden}}">
+            加载中
+        </loading>
+    </block>
+    <block wx:else>
+        <view style="line-height: 94px;color: #999;text-align: center;letter-spacing: 2rpx;">暂无课程！</view>
+    </block>
+
+</view>

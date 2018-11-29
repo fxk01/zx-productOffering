@@ -1,0 +1,8 @@
+<template name="bar1">
+    <view style="height: 131rpx;">
+        <view class="bar1box">
+            <image class="bar1-img" src="../images/bar1-img.png" catchtap="makePhonecall"></image>
+            <button open-type="contact" session-from="weapp" class="bar1-btn {{btnClass}}">{{btnTxt}}</button>
+        </view>
+    </view>
+</template>

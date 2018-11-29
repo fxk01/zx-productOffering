@@ -1,0 +1,38 @@
+<import src="../wxParse/wxParse.wxml"/>
+<view>
+    <view class="content">
+        <view class="deil_title">{{CourseDetailList.title}}</view>
+        <view class="deil_timer">{{CourseDetailList.targetTime}}</view>
+        <!--<image class="deil_bg" src="https://wechat.hefupb.com/images/detail_bg.png"></image>-->
+        <view class="deil_content">
+            <!--{{CourseDetailList.content}}-->
+            <template is="wxParse" data="{{wxParseData:detailContent.nodes}}"/>
+        </view>
+    </view>
+    <view wx:if="{{!CourseDetailList.sign}}" class="overGame">{{overgameTxt}}</view>
+    <view wx:else >
+        <view class="design_con">
+            <view class="design_conTitBox">
+                <text class="design_conTit">报名方式</text>
+            </view>
+            <view class="design_mess">
+                点击 "<text style="color:#5993f5;">立即报名</text>"，咨询报名详情！
+            </view>
+        </view>
+        <view class="beginGame questBtnbox">
+            <button class="questionBtn1" open-type="contact" session-from="weapp">
+                <view class="Btn_txt">立即报名</view>
+            </button>
+        </view>
+    </view>
+
+
+    <!--引用公共底部-->
+    <!--<import src="../template/allbom.wxml" />-->
+    <!--<template is="allBom" />-->
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1"/>-->
+
+</view>

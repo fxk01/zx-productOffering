@@ -1,0 +1,69 @@
+@import "../template/tabarTwo/tabarTwo.wxss";
+@import "../wxParse/wxParse.wxss";
+@import "../template/loadmore/loadmore.wxss";
+.container{
+    position: relative;
+    min-height: 100vh;
+    line-height: normal;
+    background-color: #eae8e8;
+}
+
+.container .free_header{
+    width:100%;
+    height: 300rpx;
+}
+
+.header_box {
+    padding:0 25rpx;
+}
+
+.offline_center{
+    background-color: #fff;
+}
+
+.con_head{
+    color:#393939;
+    line-height: 90rpx;
+    font-size:36rpx;
+    border-bottom: 2rpx solid #eae8e8 ;
+}
+
+.con_head image{
+    width:26rpx;
+    height: 25rpx;
+    margin-right: 12rpx;
+}
+
+.center_box{
+    padding: 20rpx 24rpx 28rpx;
+    border-bottom: 2rpx solid #eae8e8;
+}
+
+.center_box .cenL_img{
+    width: 160rpx;
+    height: 120rpx;
+}
+
+.center_box .cenR{
+    padding-left: 28rpx;
+}
+
+.center_box .cenR_title{
+    padding-top: 2rpx;
+    padding-bottom: 10rpx;
+    color: #161616;
+    font-weight: 600;
+    line-height:34rpx;
+    font-size: 30rpx;
+}
+
+.center_box .cenR_detail{
+    line-height: 30rpx;
+    color: #909090;
+    font-size: 22rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}

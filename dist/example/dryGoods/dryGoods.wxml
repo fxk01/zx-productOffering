@@ -1,0 +1,47 @@
+<import src="../template/loadmore/loadmore.wxml" />
+<block wx:for="{{drygoodsList}}" wx:key="{{item.id}}">
+    <view class="flex grygoodsBox"  data-id="{{item.id}}" data-BarTitleText="{{item.title}}" catchtap="goDrygoodsdetail">
+        <view class="goodsL">
+            <image src="{{item.miuNew}}"></image>
+        </view>
+        <view class="flex-1 goodsR">
+            <view class="good_title">{{item.title}}</view>
+            <view class="good_content line-clamp2">{{item.comment}}</view>
+            <view class="good_bom">
+                <text class="bgf">整编：{{item.lecturer}}</text>
+                <text class="update">更新：{{item.period}}
+                    <!--{{item.updateTime?item.updateTime:item.createTime}}-->
+                </text>
+            </view>
+        </view>
+    </view>
+</block>
+<block>
+ <template is="zan-loadmore" data="{{...zanObj}}" />
+</block>
+
+<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">
+    <view class="flex tabar_two">
+        <navigator class="flex-1 tabLeft" url="/example/index" open-type="switchTab" hover-class="tabar_active">
+            <image class="tabBtImg" src="../images/home-deflut.png"></image>
+            <view>首页</view>
+        </navigator>
+
+        <navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">
+            <button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >
+                <image class="tabCsImg" src="../images/zhao.png"></image>
+                <view>立即咨询</view>
+            </button>
+        </navigator>
+
+        <navigator class="flex-1 tabRig" url="../mine/mine" open-type="switchTab" hover-class="tabar_active">
+            <image class="tabBtImg" src="../images/me-delfut.png"></image>
+            <view>我的</view>
+        </navigator>
+
+        <!--<view class="flex-1 tabRig" catchtap="setIndex">-->
+        <!--<image class="tabBt2Img" src="images/tabBt2.png"></image>-->
+        <!--<view style="color:{{activeIndex==2 ?'#0078ff':'#909090'}}">私募学堂</view>-->
+        <!--</view>-->
+    </view>
+</view>

@@ -1,0 +1,101 @@
+<view class="haveActive_Wrap">
+    <!--miu;//线下私享会&#45;&#45;》targetTime （日期）-->
+    <!--comment; //线下私享会&#45;&#45;》introduce（介绍）-->
+    <!--price;  //线下私享会&#45;&#45;》报名结束：1.00 、立即报名标识：0.00-->
+    <!--period; //线下私享会&#45;&#45;》site （活动地点）-->
+    <!--lecturer; //线下私享会&#45;&#45;》targetTime（时间）-->
+    <block wx:if="{{myRegisterList}}" >
+        <view wx:for="{{myRegisterList}}" wx:key="{{item.id}}">
+            <view class="flex flex-align-center {{item.price=='0.00'?'':'disable-box'}} activeBox" data-id="{{item.id}}" data-price="{{item.price}}" data-BarTitleText="{{item.title}}" catchtap="GoOfflineDetailnewPage">
+                <view class="flex flex-col flex-justify-center haveL">
+                    <view class="haveL_date">{{item.miuDate}}</view>
+                    <view class="haveL_year">{{item.miuYear}}</view>
+                </view>
+                <!--miu;//线下私享会&#45;&#45;》targetTime （日期）-->
+                <!--comment; //线下私享会&#45;&#45;》introduce（介绍）-->
+                <!--price;  //线下私享会&#45;&#45;》报名结束：1.00 、立即报名标识：0.00-->
+                <!--period; //线下私享会&#45;&#45;》site （活动地点）-->
+                <!--lecturer; //线下私享会&#45;&#45;》targetTime（时间）-->
+                <view class="flex-1 haveR">
+                    <view class="acTitle">{{item.title}}</view>
+                    <view class="flex flex-align-center acBottom">
+                        <image src="../images/location.png"></image>
+                        <view class="line-clamp1 location">{{item.period}}</view> <!--上海嘉地中心-->
+                        <image src="../images/school_time.png"></image>
+                        <view class="timer">{{item.lecturer}}</view>   <!--13:00-16:00 -->
+                        <!--<view>用{{item.miu}}</view>-->
+                        <view wx:if="{{item.price!='0.00'}}" class="end">已结束</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <loading hidden="{{loadingHidden}}">
+            加载中
+        </loading>
+    </block>
+
+    <block wx:else>
+        <view style="line-height: 94px;color: #999;text-align: center;letter-spacing: 2rpx;">暂无已报名的活动~</view>
+    </block>
+
+    <!--<view style="line-height: 94px;color: #999;text-align: center;">您还没有收藏过任何课程！</view>-->
+
+    <!--一-->
+    <!--<view class="flex flex-align-center activeBox">-->
+        <!--<view class="flex flex-col flex-justify-center haveL">-->
+            <!--<view class="haveL_date">03.16</view>-->
+            <!--<view class="haveL_year">2018</view>-->
+        <!--</view>-->
+        <!--<view class="flex-1 haveR">-->
+            <!--<view class="acTitle">合富金服携手国信证券营改增主题</view>-->
+            <!--<view class="flex flex-align-center acBottom">-->
+                <!--<image src="../images/location.png"></image>-->
+                <!--<view class="location">上海嘉地中心</view>-->
+                <!--<image src="../images/school_time.png"></image>-->
+                <!--<view class="timer">13:00-16:00</view>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
+    <!--&lt;!&ndash;二&ndash;&gt;-->
+    <!--<view class="flex flex-align-center activeBox">-->
+        <!--<view class="flex flex-col flex-justify-center haveL">-->
+            <!--<view class="haveL_date">03.16</view>-->
+            <!--<view class="haveL_year">2018</view>-->
+        <!--</view>-->
+        <!--<view class="flex-1 haveR">-->
+            <!--<view class="acTitle">合富金服携手国信证券营改增主题</view>-->
+            <!--<view class="flex flex-align-center acBottom">-->
+                <!--<image src="../images/location.png"></image>-->
+                <!--<view class="location">上海嘉地中心</view>-->
+                <!--<image src="../images/school_time.png"></image>-->
+                <!--<view class="timer">13:00-16:00</view>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
+    <!--&lt;!&ndash;三&ndash;&gt;-->
+    <!--<view class="flex flex-align-center disable-box activeBox">-->
+        <!--<view class="flex flex-col flex-justify-center haveL">-->
+            <!--<view class="haveL_date">03.16</view>-->
+            <!--<view class="haveL_year">2018</view>-->
+        <!--</view>-->
+        <!--<view class="flex-1 haveR">-->
+            <!--<view class="line-clamp1 acTitle">合富金服携手国信证券营改增合富金服携手国信证券营改增主题合富金服携手国信证券营改增主题主题</view>-->
+            <!--<view class="flex flex-align-center acBottom">&lt;!&ndash;flex-justify-between&ndash;&gt;-->
+                <!--<view class="flex flex-align-center">-->
+                    <!--<image src="../images/location.png"></image>-->
+                    <!--<view class="location">上海嘉地中心</view>-->
+                    <!--<image src="../images/school_time.png"></image>-->
+                    <!--<view class="timer">13:00-16:00</view>-->
+                    <!--<view class="end">已结束</view>-->
+                <!--</view>-->
+                <!--&lt;!&ndash;<view class="end">已结束</view>&ndash;&gt;-->
+
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>
+
+
+
+
+

@@ -1,0 +1,29 @@
+
+
+
+    <view>
+        <view class="flex box main_tabTop">
+            <view catchtap="ChangeDetailTab" data-id="1" class="flex-1 tabTxt {{tabSelectedId == '1' ? 'tabTxt_active': ''}}">
+                简介
+            </view>
+            <!--wx:if="{{showdetail!='3'}}"-->
+            <view catchtap="ChangeDetailTab" data-id="2" class="flex-1 tabTxt {{tabSelectedId == '2' ? 'tabTxt_active': ''}}">
+                课程
+            </view>
+        </view>
+
+        <!--文本-->
+        <view class="introMain" hidden="{{tabSelectedId=='2'}}">
+           简介
+        </view>
+        <view hidden="{{tabSelectedId=='1'}}">
+          课程
+        </view>
+    </view>
+
+
+
+
+
+
+

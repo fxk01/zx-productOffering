@@ -1,0 +1,53 @@
+
+@import "../fillinformation/fillinformation.wxss";
+.container{
+    line-height: normal;
+    font-family: "Microsoft YaHei",Arial,Helvetica;
+}
+
+.actiinfo_title{
+    font-weight: 500;
+    text-align: center;
+    padding-top: 60rpx;
+    padding-bottom: 28rpx;
+    font-size: 48rpx;
+    color: #0380ff;
+}
+
+.actiinfo_sub{
+    text-align: center;
+    width: 460rpx;
+    margin: 0 auto 44rpx;
+    line-height: 36rpx;
+    font-size: 28rpx;
+    color: #727272;
+}
+
+.actiinfoCen{
+    padding-bottom: 44rpx;
+}
+
+.actiinfoCen .actiinfoCen_tit{
+    margin-bottom:8rpx;
+    line-height: 58rpx;
+    font-weight: bold;
+    font-size: 32rpx;
+    color: #0380ff;
+}
+
+.actiinfoCen_sub{
+    color: #323232;
+    margin-bottom:6rpx;
+    font-size: 30rpx;
+    line-height: 38rpx;
+}
+
+.actiinfoCen .actiinfoCen_con{
+    margin-bottom: 30rpx;
+}
+
+.actiinfoCen .actiinfoCen_con view{
+    line-height: 36rpx;
+    font-size: 26rpx;
+    color: #323232;
+}

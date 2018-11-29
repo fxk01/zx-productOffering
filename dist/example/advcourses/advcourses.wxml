@@ -1,0 +1,41 @@
+<import src="../template/loadmore/loadmore.wxml" />
+<view class="container">
+    <image class="free_header" src="https://wechat.hefupb.com/images/tab3_bg.png"></image>
+    <view class="adva_center">
+        <view class="header_box">
+            <view class="con_head">
+                <image src="../images/tab3-icon2.png"></image>
+                <text>进阶系列课</text>
+            </view>
+        </view>
+
+        <block wx:for="{{advItem}}" wx:key="*this" wx:for-item="advList">
+            <view class="flex center_box" data-advid="advList.id" bindtap="GoadvDetail">
+                <image class="cenL_img" src="{{advList.miu}}"></image>
+                <view class="flex-1 cenR">
+                    <view class="cenR_title">{{advList.title}}</view>
+                    <view class="cenR_detail">
+                        <view class="studyTimer">
+                            <image src="../images/tab3-clock.png"></image>
+                            <text>{{advList.period}} <!--学习时长 --></text>
+                        </view>
+
+                        <view class="teacher">
+                            <image src="../images/tab3-em.png"></image>
+                            <text>{{advList.lecturer}} <!--主讲老师 --></text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view>
+            <template is="zan-loadmore" data="{{...zanObj}}" />
+        </view>
+    </view>
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <import src="../template/tabarTwo/tabarTwo.wxml" />
+    <template is="tabar_two" />
+</view>

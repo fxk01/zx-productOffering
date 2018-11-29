@@ -1,0 +1,8 @@
+<view class="container">
+    <image class="homebg5_detail" src="https://wechat.hefupb.com/images/homebg5_detail.jpg">
+
+    </image>
+    <!--boom-->
+    <import src="../template/bar1/bar1.wxml" />
+    <template is="bar1" data="{{btnTxt: '立即咨询',btnClass:'create_consult'}}"/>
+</view>

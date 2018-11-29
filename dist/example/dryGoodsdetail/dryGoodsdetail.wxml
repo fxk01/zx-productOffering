@@ -1,0 +1,155 @@
+<view hidden="{{payStatus=='0' || payStatus=='1'}}">
+    <import src="../wxParse/wxParse.wxml"/>
+    <view class="flex detail_Header">
+        <view class="head_L_dry">
+            <image src="{{mainInfomation.miuNew}}"></image>
+        </view>
+        <view class="flex-1 head_R">
+            <view class="head_R_title">{{mainInfomation.title}}</view>
+            <view class="head_R_teacher">编辑：{{mainInfomation.lecturer}}</view>
+            <view class="head_R_timer">
+                <!--{{mainInfomation.updateTime? mainInfomation.updateTime: mainInfomation.createTime}}-->
+                {{mainInfomation.period}}
+                更新</view>  <!--2017.10.12-->
+        </view>
+        <!--<view wx:if="{{mainInfomation.favorite=='0'}}" catchtap="proFavoriteFn" class="collect">-->
+            <!--<image src="../images/school_save_default.png"></image>-->
+            <!--<view>收藏</view>-->
+        <!--</view>-->
+        <button wx:if="{{mainInfomation.favorite=='0'}}" open-type="getUserInfo" style="" bindgetuserinfo="proFavoriteFnNew" class="collect button_getUser">
+            <image src="../images/school_save_default.png"></image>
+            <view>收藏</view>
+        </button>
+        <view wx:else class="collect">
+            <image src="../images/school_save_pressed.png"></image>
+            <view style="color:#3088ff;">已收藏</view>
+        </view>
+    </view>
+    <!--<view class="flex detail_Header">-->
+        <!--<view class="head_L">-->
+            <!--<image></image>-->
+        <!--</view>-->
+        <!--<view class="head_R">-->
+            <!--<view class="head_R_title">基金估值FA</view>-->
+            <!--<view class="head_R_teacher">主讲人：李响</view>-->
+            <!--<view class="head_R_timer">2017.10.12 更新</view>-->
+        <!--</view>-->
+        <!--<view class="collect">-->
+            <!--<image src="../images/school_save_default.png"></image>-->
+            <!--&lt;!&ndash;<image src="../images/school_save_pressed.png"></image>&ndash;&gt;-->
+            <!--<view>收藏</view>-->
+        <!--</view>-->
+    <!--</view>-->
+    <view  hidden="{{mainPurchase=='1' || mainInfomation.type=='1'}}">
+        <!--多节课-->
+        <view wx:if="{{mainInfomation.prefePrice!='0.00'}}" class="flex flex-align-center center">
+            <view class="discountTxt">
+                <image mode="aspectFit" src="../images/coupans_flash.png"></image>
+                <text>限时优惠</text>
+            </view>
+            <image class="discountTag_img" mode="aspectFit" src="../images/coupans_tag.png"></image>
+            <view class="discountNum">
+                <text>￥<text class="num_Bg">{{mainInfomation.prefePrice}}</text>元</text>
+                <!--<text><text class="gang">/</text>{{mainInfomation.period}}节课</text>-->
+            </view>
+            <view class="oriPrice">￥{{mainInfomation.price}}元</view>
+        </view>
+
+        <!--单节课-->
+        <view wx:else class="flex flex-align-center single_center">
+            <view class="discountTxt">
+                <image mode="aspectFit" src="../images/coupans_flash.png"></image>
+                <text>限时免费</text>
+            </view>
+            <view class="discountNum">
+                <text>￥<text class="num_Bg">0</text>元</text>
+            </view>
+            <view class="oriPrice">￥{{mainInfomation.price}}元</view>
+        </view>
+    </view>
+
+
+    <view class="main">
+        <view class="flex box main_tabTop">
+            <!--<block wx:for="{{tablist}}" wx:key="{{item.id}}">-->
+                <view data-id="{{item.id}}" class="flex-1 tabTxt tabTxt_active">
+                    简介
+                </view>
+            <!--</block>-->
+        </view>
+        <!--富文本-->
+        <view class="offline_main">
+            <!--{{mainInfomation.description}}-->
+            <template is="wxParse" data="{{wxParseData:description_content.nodes}}"/>
+        </view>
+    </view>
+
+    <!--弹出解锁对话框-->
+    <view class="modal" hidden="{{lock}}">
+        <view class="lockBox">
+            <image catchtap="closeModal" class="lockBg_close" src="../images/lock_close.png"></image>
+            <image class="lockBg_img" src="../images/lock_big.png"></image>
+            <view class="lockBg_txt">解锁全部课程</view>
+            <view class="lockBg_btn" catchtap="payFn">立即购买</view>
+        </view>
+    </view>
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
+    <!--底部导航栏-->
+    <block>
+        <!--<view wx:if="{{mainInfomation.type=='1'}}">-->
+            <!--<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">-->
+                <!--<view class="flex tabar_two">-->
+                    <!--<view class="flex-1 tabLeft" url="../index?activeIndex=2" catchtap="homebackPage" hover-class="tabar_active">-->
+                        <!--<image class="tabBtImg" src="../images/home_default.png"></image>-->
+                        <!--<view>首页</view>-->
+                    <!--</view>-->
+
+                    <!--<navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">-->
+                        <!--<button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >-->
+                            <!--<image class="tabCsImg" src="../images/zhao.png"></image>-->
+                            <!--<view>立即咨询</view>-->
+                        <!--</button>-->
+                    <!--</navigator>-->
+
+                    <!--<navigator class="flex-1 tabRig" url="../mine/mine" open-type="redirect" hover-class="tabar_active">-->
+                        <!--<image class="tabBtImg" src="../images/tabBt_mine_default.png"></image>-->
+                        <!--<view>我的</view>-->
+                    <!--</navigator>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <!--<view wx:else>-->
+            <!--<image class="lockMessageBg" src="../images/lockMessagebg.png"></image>    &lt;!&ndash;点击购买提示&ndash;&gt;-->
+            <import src="../template/tabarTwo/tabarTwo.wxml" />
+            <template is="tabar_two" data="{{tabar_two: tabar_two,isIphoneX:isIphoneX,mainPurchase:mainPurchase}}"/>
+        <!--</view>-->
+
+    </block>
+</view>
+
+
+<!--购买成功-->
+<view wx:if="{{payStatus=='1'?true:false}}" class="successBox">
+    <view class="success_Result">
+        <image src="../images/result_success1.png" class="result_Img"></image>
+        <view class="result_Txt">购买成功</view>
+    </view>
+    <button class="resultBtn" catchtap="blockPageFn">立即听课</button>
+</view>
+
+<!--购买失败-->
+<view wx:elif="{{payStatus=='0'?true:false}}" class="loserBox">
+    <view class="loser_Result">
+        <image src="../images/result_lose.png" class="result_loser_Img"></image>
+        <view class="result_Txt">支付失败</view>
+    </view>
+    <button class="resultBtn" catchtap="payFn">继续支付</button>
+    <button class="resultBtn backBtn" catchtap="blockPageFn">返回</button>
+</view>
+
+
+
+

@@ -1,0 +1,27 @@
+<view class="header">
+    <image src="../images/town-bannerBg.png"></image>
+</view>
+<view class="center">
+    <image class="centerBg" src="../images/town-Bg-center.png"></image>
+    <image class="centerBtn-left" catchtap="changeBgFn" src="../images/left-arrow.png"></image>
+    <image class="centerBtn-rit" catchtap="changeBgFn" src="../images/right-arrow.png"></image>
+    <view hidden="{{isShow}}" class="icon1Thumb">
+        <image src="../images/town-icon1.png"></image>
+    </view>
+
+    <view hidden="{{!isShow}}" class="icon2Thumb">
+        <image src="../images/town-icon2.png"></image>
+    </view>
+</view>
+<view class="bottom">
+    <image hidden="{{isShow}}" mode="widthFix" class="town-kv1" src="https://wechat.hefupb.com/images/town-kv1_new.png"></image>
+    <image hidden="{{!isShow}}" mode="widthFix" class="town-kv2" src="https://wechat.hefupb.com/images/town-kv2.png"></image>
+    <image mode="widthFix" src="https://wechat.hefupb.com/images/town-bottom.png"></image>
+</view>
+
+<!--我要咨询-->
+<!--<view style="height: 126rpx;">-->
+    <!--<button open-type="contact" session-from="weapp" class="consultBox">-->
+        <!--<view class="consult_txt">立即咨询</view>-->
+    <!--</button>-->
+<!--</view>-->

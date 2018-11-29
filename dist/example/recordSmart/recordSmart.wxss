@@ -1,0 +1,252 @@
+@import "../template/jM_shengxinHead/jM_shengxinHead.wxss";
+@import "../template/two_footer/two_footer.wxss";
+@import "../template/bar1/bar1.wxss";
+
+.container{
+    position: relative;
+    line-height: normal;
+}
+
+.container .recordHeader{
+    background-color: #3569ff;
+}
+
+.recordHeader .headTitle{
+    font-weight: 600;
+}
+
+/*.recordCenter{*/
+    /*position: relative;*/
+    /*background-color: #e4e4e9;*/
+    /*padding:20rpx 16rpx 20rpx;*/
+    /*!*padding:412rpx 16rpx 20rpx;*!*/
+    /*min-height: 1000rpx;*/
+/*}*/
+
+/*.recordCenter .cenBox{*/
+    /*background-color: #fff;*/
+    /*padding:0 30rpx;*/
+    /*margin:0 auto 10rpx;*/
+/*}*/
+
+/*.recordCenter .cenBox1{*/
+    /*position: absolute;*/
+    /*width:658rpx;*/
+    /*top:-34rpx;*/
+    /*left:16rpx;*/
+/*}*/
+
+/*.cenBox1 .manage{*/
+    /*padding-top:32rpx;*/
+    /*padding-bottom: 18rpx;*/
+    /*border-bottom: 2rpx solid #d6d6d6;*/
+/*}*/
+
+/*.cenBox1 .manageTit,.cenBox1 .proTit{*/
+    /*padding-bottom: 12rpx;*/
+    /*font-weight: 500;*/
+    /*font-size: 30rpx;*/
+    /*color:#404040;*/
+    /*font-weight: 500;*/
+/*}*/
+
+/*.cenBox1 .desCribe{*/
+    /*line-height: 38rpx;*/
+    /*font-size: 24rpx;*/
+    /*color:#494949;*/
+/*}*/
+/*.cenBox1 .desCribe text{*/
+    /*color:#acacac;*/
+/*}*/
+/*.cenBox1 .product{*/
+    /*padding-top: 24rpx;*/
+    /*padding-bottom: 28rpx;*/
+/*}*/
+
+/*.recordCenter .cenBox2{*/
+    /*!*padding-top:48rpx;*!*/
+/*}*/
+
+/*.recordCenter .cenBox3{*/
+    /*!*padding-top:54rpx;*!*/
+    /*!*padding-top: 6rpx;*!*/
+/*}*/
+
+/*.recordCenter .cenBox4{*/
+    /*!*padding-top:62rpx;*!*/
+    /*!*padding-top: 14rpx;*!*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+/*.cenBox .setmeal_iconSmall{*/
+    /*position: absolute;*/
+    /*left:-30rpx;*/
+    /*width:70rpx;*/
+    /*height: 36rpx;*/
+/*}*/
+
+/*.cenBox2 .setmeal_iconSmall{*/
+    /*top:-26rpx;*/
+/*}*/
+
+/*.cenBox3 .setmeal_iconSmall{*/
+    /*top:-32rpx;*/
+/*}*/
+
+/*.cenBox4 .setmeal_iconSmall{*/
+    /*top:-34rpx;*/
+/*}*/
+
+/*.cenBox4 .setmeal_icon{*/
+    /*margin-top:36rpx;*/
+/*}*/
+
+/*.cenBox .setmeal_icon{*/
+    /*width: 224rpx;*/
+    /*height: 224rpx;*/
+/*}*/
+
+/*.cenBox .recenter_con{*/
+    /*padding-left: 50rpx;*/
+    /*padding-top: 48rpx;*/
+/*}*/
+
+/*.recenter_con .recenter_conTit{*/
+    /*font-size: 38rpx;*/
+    /*font-weight:600;*/
+    /*line-height: 68rpx;*/
+    /*color: #404040;*/
+/*}*/
+
+/*.recenter_con .recenter_contxt{*/
+    /*line-height: 40rpx;*/
+    /*font-size: 24rpx;*/
+    /*color: #909090;*/
+/*}*/
+
+/*.recenter_contxt .contxt-txtL{*/
+    /*display: inline-block;*/
+    /*width:200rpx;*/
+/*}*/
+
+/*.cenBox4 .contxt-txtL{*/
+    /*width:163rpx;*/
+/*}*/
+
+/*.recenter_contxt .contxt-txtR{*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.recenter_contxtbom{*/
+    /*padding-top: 10rpx;*/
+    /*padding-bottom: 46rpx;*/
+/*}*/
+
+/*.recenter_contxtbom text{*/
+    /*display: inline-block;*/
+    /*line-height: 30rpx;*/
+    /*height: 30rpx;*/
+    /*margin-right: 10rpx;*/
+    /*font-size: 18rpx;*/
+    /*padding:0 14rpx;*/
+    /*border:1rpx solid #dadada;*/
+    /*border-radius: 8rpx;*/
+/*}*/
+
+/*.recenter_contxtbom text:nth-child(odd) {*/
+    /*color:#3569ff;*/
+/*}*/
+/*.recenter_contxtbom text:nth-child(even) {*/
+    /*color:#ff8b35;*/
+/*}*/
+
+.recordcon_new{
+    position: relative;
+    padding: 344rpx 16rpx 10rpx;
+    background-color: #eae8e8;
+}
+
+.recordcon_Box{
+    background-color: #fff;
+    margin-bottom: 10rpx;
+    padding-left:34rpx;
+}
+
+.recordcon_Box:nth-child(1){
+    width:95.73%;
+   margin: 0 auto;
+    position: absolute;
+    top:-36rpx;
+}
+
+.recordcon_Tit{
+    border-bottom: 2rpx solid #e5e5e5;
+    margin-right: 22rpx;
+    letter-spacing: 2rpx;
+    padding: 36rpx 0 18rpx;
+    font-weight: 600;
+    font-size: 38rpx;
+    color: #707070;
+}
+
+.recordcon_content{
+    padding:18rpx 34rpx 16rpx 0;
+    overflow: hidden;
+}
+
+.recordcon_contentL{
+    width:318rpx;
+    float: left;
+}
+
+.recordcon_contentR{
+    float: left;
+}
+
+.recordcon_content .recordcon_detail{
+    line-height: 46rpx;
+    color: #acacac;
+}
+
+.recordcon_content .recordcon_detail image{
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 18rpx;
+}
+
+.recordcon_content .recordcon_detail text{
+    display: inline-block;
+    font-size: 24rpx;
+}
+
+.recordcon_foot{
+    padding:0 34rpx 40rpx 0;
+}
+
+.recordcon_foot text{
+    display: inline-block;
+    line-height: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+    font-size: 18rpx;
+    text-align: center;
+    border:2rpx solid #dadada;
+    border-radius: 4rpx;
+}
+
+.recordcon_foot text:nth-child(odd) {
+    min-width: 98rpx;
+    color:#3569ff;
+}
+.recordcon_foot text:nth-child(even) {
+    min-width: 78rpx;
+    color:#ff8b35;
+}
+
+
+
+
+
+
+
+

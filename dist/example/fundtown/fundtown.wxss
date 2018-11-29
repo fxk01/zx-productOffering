@@ -1,0 +1,103 @@
+.header{
+    height: 367rpx;
+}
+.header image{
+    width: 100%;
+    height: 100%;
+}
+
+.center{
+    position: relative;
+    width: 100%;
+    height: 393rpx;
+}
+
+.centerBg{
+    width: 100%;
+    height: 393rpx;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.centerBtn-left{
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    top:50%;
+    margin-top: -35rpx;
+    left:12rpx;
+    z-index: 999;
+}
+
+.centerBtn-rit{
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    top:50%;
+    margin-top: -35rpx;
+    right:12rpx;
+    z-index: 999;
+}
+
+.icon1Thumb{
+    position: absolute;
+    width: 596rpx;
+    height: 334rpx;
+    left:50%;
+    top:50%;
+    margin-left: -298rpx;
+    margin-top: -167rpx;
+    z-index: 998;
+}
+
+.icon2Thumb{
+    position: absolute;
+    width: 664rpx;
+    height: 384rpx;
+    left:50%;
+    top:50%;
+    margin-left: -332rpx;
+    margin-top: -192rpx;
+    z-index: 998;
+}
+
+.icon1Thumb image,.icon2Thumb image{
+    width: 100%;
+    height: 100%;
+}
+
+.bottom image{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.consultBox{
+    position: fixed;
+    z-index: 999;
+    bottom:0;
+    left:0;
+    background-color: #fff;
+    height: 126rpx;
+    width:100%;
+}
+
+.consultBox:after{
+    border:none;
+    border: 0;
+}
+
+.consultBox .consult_txt{
+    border-radius: 10rpx;
+    position: absolute;
+    left:20rpx;
+    bottom:14rpx;
+    text-align: center;
+    width:710rpx;
+    height: 90rpx;
+    background-color: #0078ff;
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 90rpx;
+}

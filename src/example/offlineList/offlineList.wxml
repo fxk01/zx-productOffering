@@ -1,0 +1,48 @@
+<view class="page" style="position:relative;">
+    <import src="../wxParse/wxParse.wxml"/>
+     <import src="../template/tab_panel/tab_panel.wxml" />
+        <view class="weui-tab__content3" style="min-height:1400rpx;">
+            <view class="tab3">
+                <!--线下活动-->
+                <view hidden="{{!offlineList}}" class="tab3list" style="border-top:6rpx solid #ebebeb;">
+                    <view  class="flex flex-justify-between  tab3list4_title">
+                        <view class="textL">{{offlineName}}</view>
+                        <!--<view class="textMore">更多></view>-->
+                    </view>
+
+                    <!--miu;//线下私享会&#45;&#45;》targetTime （日期）-->
+                    <!--comment; //线下私享会&#45;&#45;》introduce（介绍）-->
+                    <!--price;  //线下私享会&#45;&#45;》报名结束：1.00 、立即报名标识：0.00-->
+                    <!--period; //线下私享会&#45;&#45;》site （活动地点）-->
+                    <!--lecturer; //线下私享会&#45;&#45;》targetTime（时间）-->
+
+                    <block wx:for="{{offlineList}}" wx:key="{{item.id}}">
+                        <view class="offlineBox" data-id="{{item.id}}" data-price="{{item.price}}" data-BarTitleText="{{item.title}}" catchtap="GoOfflineDetailnewPage">
+                            <view class="offlineTitle">{{item.title}}</view>
+                            <view class="offlineContent line-clamp2">{{item.comment}}</view>
+                            <view class="flex flex-justify-between offlineBom">
+                                <view>{{item.miu}}</view>    <!--2017.9.10-->
+                                <!--立即报名-->
+                                <view wx:if="{{item.price=='0.00'}}" class="offline_sign">
+                                    <image src="../images/school_sign.png" class="sign_Small"></image>
+                                    <text>立即报名</text>
+                                </view>
+
+                                <!--报名已结束-->
+                                <view wx:else class="offline_sign">
+                                    <text class="singOver">已结束</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+
+
+    <view style="height:20rpx;"></view>
+
+    <loading hidden="{{loadingHidden}}">
+        加载中
+    </loading>
+</view>

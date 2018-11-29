@@ -1,0 +1,93 @@
+<view class="container">
+    <!--引用积募头部-->
+    <import src="../template/jMheader/jMheader.wxml" />
+    <template is="jm_header" data="{{jMhidden: true}}"/>
+
+    <!--内容-->
+    <view class="content">
+        <view class="torialLine"></view>
+        <view class="torialBox flex">
+            <view class="torialLimg torialLimg_yellow"><text>模</text></view>
+            <!--<image class="torialLimg" src="../images/comRuk-icon_shi.png" mode="aspectFit"></image>-->
+            <view class="torialRig flex-1">
+                <view class="torialTitle">备案模版</view>
+                <view class="torialTxt">1、中基协官方系统操作教程</view>
+                <view class="torialTxt">2、管理人登记模板</view>
+                <view class="torialTxt">3、管理人登记制度模板</view>
+                <view class="torialTxt">4、基金备案模板</view>
+                <view class="torialTxt">5、管理人信披报送模板</view>
+                <view class="torialTxt">6、基金合同相关模板</view>
+            </view>
+        </view>
+
+        <view class="torialBox flex">
+            <view class="torialLimg torialLimg_red"><text>P</text></view>
+            <!--<image class="torialLimg" src="../images/comRuk-icon_shi.png" mode="aspectFit"></image>-->
+            <view class="torialRig flex-1">
+                <view class="torialTitle">企业介绍及路演PPT</view>
+                <view class="torialTxt">1、企业介绍PPT</view>
+                <view class="torialTxt">2、产品路演PPT</view>
+            </view>
+        </view>
+
+        <view class="torialBox flex">
+            <view class="torialLimg torialLimg_blue"><text>文</text></view>
+            <!--<image class="torialLimg" src="../images/comRuk-icon_shi.png" mode="aspectFit"></image>-->
+            <view class="torialRig flex-1">
+                <view class="torialTitle">相关文件</view>
+                <view class="torialTxt">1、基金登记备案问答1-14</view>
+                <view class="torialTxt">2、中基协基金估值指引</view>
+                <view class="torialTxt">3、2017版基金从业资格考试大纲</view>
+                <view class="torialTxt">4、2018年度基金从业人员资格考试计划</view>
+            </view>
+        </view>
+
+        <view class="torialBox flex">
+            <view class="torialLimg torialLimg_cyan" ><text>干</text></view>
+            <!--<image class="torialLimg" src="../images/comRuk-icon_shi.png" mode="aspectFit"></image>-->
+            <view class="torialRig flex-1">
+                <view class="torialTitle">干货分享</view>
+                <view class="torialTxt">1、PPT：三类、国有股东、上市公司+PE</view>
+                <view class="torialTxt">2、PPT：详解产业并购</view>
+                <view class="torialTxt">3、28家民营金融巨头持股图</view>
+            </view>
+        </view>
+
+        <view class="torialLine"></view>
+
+        <!--<view class="torialBox flex">-->
+            <!--<image class="torialLimg" src="../images/comRuk-icon_bei.png" mode="aspectFit"></image>-->
+            <!--<view class="torialRig flex-1">-->
+                <!--<view class="torialTitle">-->
+                    <!--「积募」特别为您准备了多项私募模板-->
+                <!--</view>-->
+                <!--<view class="torialTxt">中国证券投资基金业协会关于私募资管平台和信披平台具体操作视频合集。</view>-->
+            <!--</view>-->
+        <!--</view>-->
+        <!--<view class="torialLine"></view>-->
+
+        <!--<view class="themess">-->
+            <!--<text>⬇️   点击立即咨询，回复"模板"，获取海量模板</text>-->
+        <!--</view>-->
+        <view class="design_con">
+            <view class="design_conTitBox">
+                <text class="design_conTit">获取方式</text>
+            </view>
+            <view class="design_mess">
+                返回首页，点击 "<text style="color:#5993f5;">立即咨询</text>"，回复"模板",立即获取！
+            </view>
+        </view>
+
+    </view>
+
+
+    <!--引用公共底部 服务热线-->
+    <!--<import src="../template/allbom.wxml" />-->
+    <!--<template is="allBom" />-->
+
+    <!--提问-->
+    <!--<view class="questBtnbox">-->
+        <!--<button open-type="contact" session-from="weapp" class="questionBtn">立即咨询</button>-->
+    <!--</view>-->
+</view>
+

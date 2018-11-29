@@ -1,0 +1,9 @@
+<view class="container">
+    <image class="adv_img" mode="widthFix"  src="https://wechat.hefupb.com/images/medicalnBg.jpg"></image>
+    <!--我要咨询-->
+    <!--<view style="height: 126rpx;">-->
+        <!--<button open-type="contact" session-from="weapp" class="consultBox">-->
+            <!--<view class="consult_txt">立即咨询</view>-->
+        <!--</button>-->
+    <!--</view>-->
+</view>

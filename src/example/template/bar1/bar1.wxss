@@ -1,0 +1,33 @@
+.bar1box{
+    height: 129rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    border-top:2rpx solid #f9f9f9;
+}
+
+.bar1box .bar1-img{
+    position: absolute;
+    left:16rpx;
+    bottom:0;
+    width:163rpx;
+    height: 150rpx;
+}
+
+.bar1box .bar1-btn{
+    text-align: center;
+    border-radius:8rpx;
+    position: absolute;
+    right:16rpx;
+    bottom:16rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    color:#fff;
+    width:526rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #0078ff;
+}

@@ -1,0 +1,128 @@
+<view class="mycollect_Wrap">
+    <view wx:if="{{myFavoriteList}}">
+        <!--热点解读课-->
+        <view hidden="{{!hotreadList}}" class="tab3list">
+            <view class="tab3list2_title">
+                <view class="textL">{{hotreadList.name}}</view>
+            </view>
+            <block wx:for="{{hotreadList.productList}}" wx:key="{{item.id}}">
+                <view class="flex flex-align-center hotreadBox" data-id="{{item.id}}" data-showdetail="2"  data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                    <view class="hotread_L">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 hotread_R">
+                        <view class="hotreadTitle line-clamp2">{{item.title}}</view>
+                        <view>
+                            <text class="hotreadTxt1">主讲人：{{item.lecturer}}</text>
+                            <text class="hotreadTxt1">更新：{{item.updateTime? item.updateTime: item.createTime}}</text> <!--2017.10.12-->
+                            <!--<text class="hotreadTxt1">{{item.time_minute}} \n {{item.time_seconds}}</text>-->
+
+                        </view>
+                        <!--<view class="hotreadTxt2">开课时间：2017.10.12  20:00</view>-->
+                    </view>
+                </view>
+            </block>
+        </view>
+
+        <!--进阶系列课-->
+        <view hidden="{{!advList}}" class="tab3list">
+            <view class="flex tab3list3_title">
+                <view class="textL">{{advList.name}}</view>
+            </view>
+            <block wx:for="{{advList.productList}}" wx:key="{{item.id}}">
+                <view class="flex flex-align-center advBox" data-id="{{item.id}}" data-showdetail="3" data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                    <view class="adv_L">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 adv_R">
+                        <view class="advTitle">{{item.title}}</view>
+                        <view class="advContent line-clamp2">{{item.comment}}</view>
+                        <view class="advbom">
+                            <text>讲师：{{item.lecturer}}</text>
+                            <text>共{{item.period}}节课</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+        <!--线下活动-->
+        <view hidden="{{!offlineList}}" class="tab3list">
+            <view class="flex tab3list3_title">
+                <view class="textL">{{offlineList.name}}</view>
+            </view>
+            <!--二-->
+            <block wx:for="{{offlineList.productList}}" wx:key="{{item.id}}">
+                <view class="flex flex-align-center {{item.price=='0.00'?'':'disable-box'}} activeBox" data-id="{{item.id}}" data-price="{{item.price}}" data-BarTitleText="{{item.title}}" catchtap="GoOfflineDetailnewPage">
+                    <view class="flex flex-col flex-justify-center haveL">
+                        <view class="haveL_date">{{item.miuDate}}</view>
+                        <!--03.16-->
+                        <view class="haveL_year">{{item.miuYear}}</view>
+                    </view>
+                    <view class="flex-1 haveR">
+                        <view class="acTitle">{{item.title}}</view>
+                        <view class="flex flex-align-center acBottom">
+                            <image src="../images/location.png"></image>
+                            <view class="line-clamp1 location">{{item.period}}</view> <!--上海嘉地中心-->
+                            <image src="../images/school_time.png"></image>
+                            <view class="timer">{{item.lecturer}}</view> <!--13:00-16:00-->
+                            <view wx:if="{{item.price!='0.00'}}" class="end">已结束</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+        <!--积募干货-->
+        <view hidden="{{!dryGoodsList}}" class="tab3list">
+            <view class="flex tab3list4_title" style="border-bottom:2rpx solid #f1f1f1;">
+                <view class="textL">{{dryGoodsList.name}}</view>
+            </view>
+            <block wx:for="{{dryGoodsList.productList}}" wx:key="{{item.id}}">
+                <view class="flex grygoodsBox" data-id="{{item.id}}" data-BarTitleText="{{item.title}}" catchtap="goDrygoodsdetail">
+                    <view class="goodsL">
+                        <image src="{{item.miuNew}}"></image>
+                    </view>
+                    <view class="flex-1 goodsR">
+                        <view class="good_title">{{item.title}}</view>
+                        <view class="good_content line-clamp2">{{item.comment}}</view>
+                        <view class="good_bom">
+                            <text class="bgf">整编：{{item.lecturer}}</text>
+                            <!--<text class="update">更新：{{item.updateTime}}1</text> &lt;!&ndash;2018.1.&ndash;&gt;-->
+                            <text class="update">更新：{{item.period}}
+                                <!--{{item.updateTime?item.updateTime:item.createTime}}-->
+                            </text> <!--2018.1.-->
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <loading hidden="{{loadingHidden}}">
+            加载中
+        </loading>
+    </view>
+    <view wx:else style="line-height: 94px;color: #999;text-align: center;letter-spacing: 2rpx;" >您还没有收藏过任何课程~</view>
+    <!--底部导航栏-->
+    <!--<block>-->
+        <!--<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">-->
+            <!--<view class="flex tabar_two">-->
+                <!--<navigator class="flex-1 tabLeft" url="/example/index?activeIndex=2" open-type="switchTab" hover-class="tabar_active">-->
+                    <!--<image class="tabBtImg" src="../images/home_default.png"></image>-->
+                    <!--<view>首页</view>-->
+                <!--</navigator>-->
+
+                <!--<navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">-->
+                    <!--<button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >-->
+                        <!--<image class="tabCsImg" src="../images/zhao.png"></image>-->
+                        <!--<view>在线咨询</view>-->
+                    <!--</button>-->
+                <!--</navigator>-->
+
+                <!--<navigator class="flex-1 tabRig" url="../mine/mine" open-type="switchTab" hover-class="tabar_active">-->
+                    <!--<image class="tabBtImg" src="../images/tabBt_mine_default.png"></image>-->
+                    <!--<view>我的</view>-->
+                <!--</navigator>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</block>-->
+</view>

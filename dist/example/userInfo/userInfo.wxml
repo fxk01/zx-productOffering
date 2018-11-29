@@ -1,0 +1,6 @@
+<view>用户信息页面
+        <!--获取用户信息-->
+    <button open-type="getUserInfo" bindgetuserinfo="getUser">获取用户信息</button>
+<open-data type="userAvatarUrl" bindtap="getUserFn"></open-data>
+<open-data type="userNickName" lang="zh_CN"></open-data>
+</view>

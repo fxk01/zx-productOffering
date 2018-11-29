@@ -1,0 +1,307 @@
+<view class="container">
+    <view class="deal-thumb smart_thumb" bindtap="Gofillinformation">
+        <image class="deal-img" src="../images/deal.png" mode="aspectFill"></image>
+    </view>
+    <import src="../template/jM_shengxinHead/jM_shengxinHead.wxml" />
+    <!--积募私募备案-->
+    <template is="jm_shengxinHead" data="{{headTitle:'积募备案',headDetil:'全程跟踪辅导备案，协助高效完成全套备案',headconTxt1:'上千家伙伴的选择',headconTxt2:'值得信赖的伙伴',headconTxt3:'专业高效',headcon_img1:'../images/reco_choice.png',headcon_img2:'../images/reco_partner.png',headcon_img3:'../images/reco_efficiency.png' }}"/>
+    <!--center-->
+    <!--<view class="recordCenter">-->
+        <!--<view class="cenBox cenBox1">-->
+            <!--<view class="manage">-->
+                <!--<view class="manageTit">私募管理人备案</view>-->
+                <!--<view class="desCribe">-->
+                    <!--服务内容：<text>企业合法合规尽调、企业内控管理制度、备案整改解决方案 、管理人登记备案报送、商业计划书和法律意见书拟定等。</text>-->
+                <!--</view>-->
+            <!--</view>-->
+            <!--<view class="product">-->
+                <!--<view class="proTit">私募产品备案</view>-->
+                <!--<view class="desCribe">-->
+                    <!--服务内容：<text>产品交易结构设计、产品发行管理、产品备案填报、产品定期信息披露、产品重大事项变更等新产品备案和存续产品信息维护。</text>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="flex flex-align-center cenBox cenBox2">-->
+            <!--<view style="position:relative;">-->
+                <!--<image class="setmeal_iconSmall" src="../images/taocan_a_icon.png"></image>-->
+            <!--</view>-->
+            <!--<image class="setmeal_icon" src="https://wechat.hefupb.com/images/taocan_a.png"></image>-->
+            <!--<view class="flex-1 recenter_con">-->
+                <!--<view class="recenter_conTit">私募机构首次备案</view>-->
+                <!--<view class="recenter_contxtbox">-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">私募机构首次备案</text>-->
+                        <!--<text class="contxt-txtR">企业内控管理制度</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">备案整改解决方案</text>-->
+                        <!--<text class="contxt-txtR">商业计划书</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">法律意见书</text>-->
+                        <!--<text class="contxt-txtR">管理人登记备案报送</text>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="recenter_contxtbom">-->
+                    <!--<text>专业周到</text>-->
+                    <!--<text>效率高</text>-->
+                    <!--<text>高通过率</text>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="flex flex-align-center cenBox cenBox3">-->
+            <!--<view style="position:relative;">-->
+                <!--<image class="setmeal_iconSmall" src="../images/taocan_b_icon.png"></image>-->
+            <!--</view>-->
+            <!--<image class="setmeal_icon" src="https://wechat.hefupb.com/images/taocan_b.png"></image>-->
+            <!--<view class="flex-1 recenter_con">-->
+                <!--<view class="recenter_conTit">管理人+产品存续维护</view>-->
+                <!--<view class="recenter_contxtbox">-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">管理人年度更新</text>-->
+                        <!--<text class="contxt-txtR">入会服务</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">审计报告填报</text>-->
+                        <!--<text class="contxt-txtR">产品备案</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">管理人重大事项变更</text>-->
+                        <!--<text class="contxt-txtR">产品定期更新</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">从业人员信息维护</text>-->
+                        <!--<text class="contxt-txtR">产品定期信息披露</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">拟定基金合同及相关协议</text>-->
+                        <!--<text class="contxt-txtR">产品清盘备案</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">对接募集监督机构</text>-->
+                        <!--<text class="contxt-txtR">产品重大事项变更</text>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="recenter_contxtbom">-->
+                    <!--<text>超人气套餐</text>-->
+                    <!--<text>全年无忧</text>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="flex flex-align-center cenBox cenBox4">-->
+            <!--<view style="position:relative;">-->
+                <!--<image class="setmeal_iconSmall" src="../images/taocan_c_icon.png"></image>-->
+            <!--</view>-->
+            <!--<image class="setmeal_icon" src="https://wechat.hefupb.com/images/taocan_c.png"></image>-->
+            <!--<view class="flex-1 recenter_con">-->
+                <!--<view class="recenter_conTit">首发产品全周期维护</view>-->
+                <!--<view class="recenter_contxtbox">-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">对接募集监督机构</text>-->
+                        <!--<text class="contxt-txtR">产品定期信息披露</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">拟定基金合同及相关协议</text>-->
+                        <!--<text class="contxt-txtR">产品清盘备案</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">产品备案</text>-->
+                        <!--<text class="contxt-txtR">产品重大事项变更</text>-->
+                    <!--</view>-->
+                    <!--<view class="recenter_contxt">-->
+                        <!--<text class="contxt-txtL">产品定期更新</text>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="recenter_contxtbom">-->
+                    <!--<text>超人气套餐</text>-->
+                    <!--<text>全年无忧</text>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
+    <view class="mar_T"></view>
+
+    <view class="recordcon_new">
+        <view class="box recordcon_Box">
+            <view class="recordcon_Tit">管理人<text style="color:#3569ff;">首次备案</text></view>
+            <view class="recordcon_content">
+                <view class="recordcon_contentL">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>企业合法合规尽调</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>备案整改解决方案</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>法律意见书</text>
+                    </view>
+                </view>
+
+                <view class="recordcon_contentR">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>企业内控管理制度</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>商业计划书</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>管理人登记备案报送</text>
+                    </view>
+                </view>
+            </view>
+            <view class="recordcon_foot">
+                <text>专业周到</text>
+                <text>效率高</text>
+            </view>
+        </view>
+
+        <!--二-->
+        <view class="recordcon_Box">
+            <view class="recordcon_Tit">首发产品<text style="color:#3569ff;">全周期维护</text></view>
+            <view class="recordcon_content">
+                <view class="recordcon_contentL">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>对接募集监督机构</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>拟定基金合同及相关协议</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品备案</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品定期更新</text>
+                    </view>
+                </view>
+
+                <view class="recordcon_contentR">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品定期信息披露</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品清盘备案</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品重大事项变更</text>
+                    </view>
+                </view>
+            </view>
+            <view class="recordcon_foot">
+                <text>首发</text>
+                <text>全周期</text>
+                <text>全程无忧</text>
+            </view>
+        </view>
+
+        <!--三-->
+        <view class="recordcon_Box">
+            <view class="recordcon_Tit">管理人+产品存续<text style="color:#3569ff;">年度维护</text></view>
+            <view class="recordcon_content">
+                <view class="recordcon_contentL">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>管理人年度更新</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>审计报告填报</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>管理人重大事项变更</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>从业人员信息维护</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>入会服务</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>对接募集监督机构</text>
+                    </view>
+                </view>
+
+                <view class="recordcon_contentR">
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>拟定基金合同及相关协议</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品备案</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品定期更新</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品定期信息披露</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品清盘备案</text>
+                    </view>
+
+                    <view class="recordcon_detail">
+                        <image src="../images/gou.png"></image>
+                        <text>产品重大事项变更</text>
+                    </view>
+                </view>
+            </view>
+            <view class="recordcon_foot">
+                <text>超人气</text>
+                <text>年度</text>
+            </view>
+        </view>
+    </view>
+
+    <!--footer-->
+    <import src="../template/two_footer/two_footer.wxml" />
+    <template is="two_footer"/>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '在线咨询',btnClass:'smart_consult'}}"/>-->
+</view>

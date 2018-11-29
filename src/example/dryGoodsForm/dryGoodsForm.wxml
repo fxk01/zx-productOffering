@@ -1,0 +1,71 @@
+<view hidden="{{!displayPage}}">
+    <import src="../template/toast/toast.wxml"/>
+    <template is="toast" data="{{toast}}"/>
+    <view class="flex flex-align-center loadHeader">
+        <image src="../images/lettle.png" class="head_bg"></image>
+        <view class="head_R">
+            <view class="headR_title">请留下您的联系信息</view>
+            <view class="headR_txt">我们会尽快发送给您</view>
+        </view>
+    </view>
+    <view class="loadMain">
+        <view class="main_title">*为必填项</view>
+        <!--<view class="min_contentWrap">-->
+            <view class="flex flex-align-center min_contentBox {{emailIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">邮箱地址*</view>
+                    <input class="flex-1 contentVal" bindinput="emailInputFn" bindfocus="emailfocusFn" bindblur="emailblurFn" placeholder="{{emailIsChange?'请输入您的邮箱':''}}" />
+                <!--</view>-->
+                <view hidden="{{emailIsChange}}" class="message">请填写正确的邮箱</view>
+            </view>
+
+            <view class="flex flex-align-center min_contentBox {{phoneIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">手机号码*</view>
+                    <input class="flex-1 contentVal" bindfocus="phonefocusFn" bindblur="phoneblurFn" placeholder="{{phoneIsChange?'请输入您的手机号':''}}" type="number"/>
+                <!--</view>-->
+                <view class="message" hidden="{{phoneIsChange}}">请填写正确的手机号</view>
+            </view>
+
+        <!--mainType=='3':电子书，不需要收货地址，发邮件-->
+            <view hidden="{{mainType=='1'}}" class="flex flex-align-center min_contentBox {{addrIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">收货地址*</view>
+                    <!--class="flex-1 addressVal"-->
+                    <input class="flex-1 contentVal"  bindfocus="addrfocusFn" bindblur="addrblurFn" placeholder="{{addrIsChange?'请输入正确的收货地址':''}}"/>
+                    <!--<textarea class="flex-1 addressVal" placeholder="请输入正确的收货地址"></textarea>-->
+                <!--</view>-->
+                <view class="message" hidden="{{addrIsChange}}">请填写正确的收货地址</view>
+            </view>
+        <!--</view>-->
+        <!--<view class="min_duty">-->
+            <view class="flex flex-align-center min_contentBox">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">职务</view>
+                    <input class="flex-1 contentVal"  bindfocus="dutyfocusFn" bindblur="dutyblurFn" placeholder="请输入您的职务"/>
+                <!--</view>-->
+                <!--<view class="message">请填写正确的职务</view>-->
+            </view>
+        <!--</view>-->
+    </view>
+    <view class="textareaBox">
+        <textarea class="box" bindfocus="commentfocusFn" bindblur="commentblurFn" placeholder="{{mainType=='1'?'备注':'备注（如需发票请填写公司名称和纳税识别号）'}}" style="margin-bottom:36rpx;"></textarea>
+    </view>
+    <button wx:if="{{mainPurchase=='1'}}" class="resultBtn" disabled="{{disableBool}}" catchtap="dryGoodsLoodFn">提交</button>
+    <button wx:else class="resultBtn" disabled="{{disableBool}}" catchtap="dryGoodsUsersubFn">立即购买</button>
+
+</view>
+
+<loading hidden="{{loadingHidden}}">
+正在提交中...
+</loading>
+
+<!--购买成功-->
+<view hidden="{{displayPage}}" class="successBox">
+    <view class="success_Result">
+        <image src="../images/download_success.png" class="result_Img"></image>
+        <view class="result_TxtBg">提交成功</view>
+        <view>课件将在24小时后发送给您！</view>
+    </view>
+    <button class="resultBtn" catchtap="goDryGoodsPage">查看更多积募干货资料</button>
+</view>

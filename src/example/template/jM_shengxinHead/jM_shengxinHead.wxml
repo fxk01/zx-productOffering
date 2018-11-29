@@ -1,0 +1,28 @@
+<template name="jm_shengxinHead">
+    <view class="recordHeader">
+        <view class="headTitle">{{headTitle}}</view>
+        <view class="headDetil">{{headDetil}}</view>
+        <view class="flex">
+            <view class="flex-1 headCon">
+                <view class="headconChoice headconPosi1">
+                    <image src="{{headcon_img1}}" mode="aspectFill"></image>
+                    <view class="headconTxt">{{headconTxt1}}</view>
+                </view>
+            </view>
+
+            <view class="flex-1 headCon">
+                <view class="headconChoice headconPosi2">
+                    <image src="{{headcon_img2}}" mode="aspectFill"></image>
+                    <view class="headconTxt">{{headconTxt2}}</view>
+                </view>
+            </view>
+
+            <view class="flex-1 headCon">
+                <view class="headconChoice">
+                    <image src="{{headcon_img3}}" mode="aspectFill"></image>
+                    <view class="headconTxt">{{headconTxt3}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,59 @@
+<view class="page" style="position:relative;">
+    <import src="../wxParse/wxParse.wxml"/>
+    <!--<scroll-view style="height:{{scrollHeight}}rpx;background-color:#eae8e8" scroll-y="true"  scroll-top="{{scrollTop}}">-->
+    <import src="../template/tab_panel/tab_panel.wxml" />
+        <view class="weui-tab__content3" style="min-height:1400rpx;">
+            <view class="tab3">
+                <!--热点解读课-->
+                <view hidden="{{!hotreadList}}" class="tab3list">
+                    <view style="border-top:6rpx solid #ebebeb;" class="flex flex-justify-between tab3list2_title">
+                        <view class="flex">
+                            <view class="textL">{{hotreadName}}</view>
+                            <view class="textR">免费</view>
+                        </view>
+                    </view>
+
+                    <block wx:for="{{hotreadList}}" wx:key="{{item.id}}">
+                        <view class="flex flex-align-center hotreadBox" data-id="{{item.id}}" data-showdetail="2" data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                            <view class="hotread_L">
+                                <image src="{{item.miuNew}}"></image>
+                            </view>
+                            <view class="flex-1 hotread_R">
+                                <view class="hotreadTitle">{{item.title}}</view>
+                                <view class="hotreadTxt1">主讲人：{{item.lecturer}} </view>
+                                <view class="hotreadTxt2">更新时间：{{item.updateTime? item.updateTime: item.createTime}}</view>
+                                <!--<view class="hotreadTxt2">开课时间：{{item.time_minute}} \n {{item.time_seconds}}</view>-->
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+
+
+    <view style="height:20rpx;"></view>
+    <!--<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">-->
+        <!--<view class="flex tabar_two">-->
+            <!--<navigator class="flex-1 tabLeft" url="privateSchool/privateSchool" open-type="navigate" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="images/tabBt_about.png"></image>-->
+                <!--<view>关于积募</view>-->
+            <!--</navigator>-->
+
+            <!--<navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">-->
+                <!--<button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >-->
+                    <!--<image class="tabCsImg" src="./images/zhao.png"></image>-->
+                    <!--<view>立即咨询</view>-->
+                <!--</button>-->
+            <!--</navigator>-->
+
+            <!--<navigator class="flex-1 tabRig" url="mine/mine" open-type="navigate" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="images/tabBt_mine_default.png"></image>-->
+                <!--<view>我的</view>-->
+            <!--</navigator>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</scroll-view>-->
+    <loading hidden="{{loadingHidden}}">
+        加载中
+    </loading>
+</view>

@@ -1,0 +1,34 @@
+<view class="page" style="position:relative;">
+    <import src="../wxParse/wxParse.wxml"/>
+    <import src="../template/tab_panel/tab_panel.wxml" />
+        <view class="weui-tab__content3" style="min-height:1400rpx;">
+            <view class="tab3">
+                <!--专题系列课-->
+                <view hidden="{{!advList}}"  class="tab3list">
+                    <view class="flex flex-justify-between  tab3list3_title" style="border-top:6rpx solid #ebebeb;">
+                        <view class="textL">{{advName}}</view>
+                    </view>
+                    <block wx:for="{{advList}}" wx:key="{{item.id}}">
+                        <view class="flex flex-align-center advBox" data-id="{{item.id}}" data-showdetail="3" data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                            <view class="adv_L">
+                                <image src="{{item.miuNew}}"></image>
+                            </view>
+                            <view class="flex-1 adv_R">
+                                <view class="advTitle">{{item.title}}</view>
+                                <view class="advContent line-clamp2">{{item.comment}}</view>
+                                <view class="advbom">
+                                    <text>讲师：{{item.lecturer}}</text>
+                                    <text>共{{item.period}}节课</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+
+            </view>
+        </view>
+    <view style="height:20rpx;"></view>
+    <loading hidden="{{loadingHidden}}">
+        加载中
+    </loading>
+</view>

@@ -1,0 +1,14 @@
+<template name="tab_panel">
+<view class="tab_panelList">
+    <image class="pannel_big" src="{{bigImg}}" mode="scaleToFill"></image>
+    <!--<view class="panelBox">-->
+        <!--<image class="panel-img" src="{{smallImg}}" mode="aspectFill"></image>-->
+        <!--<view class="pannelRit">-->
+            <!--<view class="pannel-title">{{panelTil}}</view>-->
+            <!--<view class="pannel-txt">{{pannelTxt1}}</view>-->
+            <!--<view class="pannel-txt">{{pannelTxt2}}</view>-->
+            <!--<view class="pannel-consulting">{{consulting}}</view>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>
+</template>

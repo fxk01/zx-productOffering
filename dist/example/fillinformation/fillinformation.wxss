@@ -1,0 +1,82 @@
+@import "../template/jMheader/jMheader.wxss";
+.container{
+    line-height: normal;
+    padding:0 55rpx;
+}
+
+.info_center{
+    border-top: 2rpx solid #f0f0f0;
+    padding-top: 54rpx;
+}
+
+.info_center .info_title{
+    font-size: 37rpx;
+    color: #0380ff;
+    padding-bottom: 16rpx;
+    text-align: center;
+}
+
+.info_center .info_subtitle{
+    text-align: center;
+    font-size: 22rpx;
+    margin-bottom: 50rpx;
+    color: #909090;
+}
+
+.info_center .deilservice{
+    color:#909090;
+}
+
+.info_center .info_box{
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    padding:0 30rpx;
+    width:580rpx;
+    height: 98rpx;
+    margin-bottom: 20rpx;
+    background-color: #f2fdff;
+    line-height: 98rpx;
+}
+
+.info_box image{
+    width:28rpx;
+    height: 24rpx;
+}
+
+.info_box input{
+    color: #0380ff;
+    padding-left: 20rpx;
+}
+
+.inp_holder{
+    font-size: 24rpx;
+    color:#87cdff;
+}
+
+.reminder{
+    line-height: 30rpx;
+    font-size:24rpx;
+    color:#ec2e2e;
+}
+
+.btnBox{
+    padding-top:44rpx;
+}
+
+.inBtn{
+    width:640rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #0078ff;
+}
+
+/*公共底部样式覆盖*/
+.allbomBox{
+    background-color: #fff;
+}
+
+.allbomBox .serviceLine{
+    padding-top:80rpx;
+}

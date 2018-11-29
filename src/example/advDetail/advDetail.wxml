@@ -1,0 +1,29 @@
+<view class="container">
+
+    <block wx:if="{{flag=='advanceList'}}">
+        <!--<image class="adv_img" mode="widthFix"  src="https://wechat.hefupb.com/images/adv-bg1.jpg"></image>-->
+        <image class="adv_img" mode="widthFix"  src="{{CourseDetailList.bgimage}}"></image>
+    </block>
+
+    <block wx:else="{{flag=='freeList'}}">
+        <!--<image class="free_img" mode="widthFix" wx:if="{{id=='1'}}" src="https://wechat.hefupb.com/images/freeBig1.jpg"></image>-->
+        <!--<image class="free_img2" wx:elif="{{id=='2'}}" src="https://wechat.hefupb.com/images/freeBig2.jpg"></image>-->
+        <!--<image class="free_img3" wx:elif="{{id=='3'}}" src="https://wechat.hefupb.com/images/freeBig7.jpg"></image>-->
+        <!--<image class="free_img4" wx:elif="{{id=='4'}}" src="https://wechat.hefupb.com/images/freeBig4.jpg"></image>-->
+        <!--<image class="free_img5" wx:elif="{{id=='5'}}" src="https://wechat.hefupb.com/images/freeBig5.jpg"></image>-->
+        <!--<image class="free_img6" wx:elif="{{id=='6'}}" src="https://wechat.hefupb.com/images/freeBig6.jpg"></image>-->
+        <!--<image class="free_img7" wx:elif="{{id=='7'}}" src="https://wechat.hefupb.com/images/freeBig3.jpg"></image>-->
+        <!--<image class="free_img8" wx:elif="{{id=='8'}}" src="https://wechat.hefupb.com/images/freeBig8.jpg"></image>-->
+
+        <image class="free_img" mode="widthFix" src="{{CourseDetailList.bgimage}}"></image>
+
+    </block>
+
+    <!--引用公共底部-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--&lt;!&ndash;boom&ndash;&gt;-->
+    <import src="../template/bar1/bar1.wxml" />
+    <template is="bar1" data="{{btnTxt: '立即听课'}}"/>
+</view>

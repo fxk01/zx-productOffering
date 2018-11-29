@@ -1,0 +1,99 @@
+<view class="container">
+    <view class="deal-thumb create_thumb" bindtap="Gofillinformation">
+        <image class="deal-img" src="../images/deal.png" mode="aspectFill"></image>
+    </view>
+    <import src="../template/jM_shengxinHead/jM_shengxinHead.wxml" />
+    <template is="jm_shengxinHead"  data="{{headTitle:'积募省心创设',headDetil:'为您提供注册创设一体化解决方案',headconTxt1:'工商注册',headconTxt2:'资源对接',headconTxt3:'优惠政策',headcon_img1:'../images/jM_create1.png',headcon_img2:'../images/jM_create2.png',headcon_img3:'../images/jM_create3.png'}}"/>
+    <view class="create_Con">
+        <!--一-->
+        <view class="box con_class con_class1">
+            <view class="con_Title">企业创设</view>
+            <view class="flex flex-align-center con_Content">
+                <!--<image class="con_classL" src="https://wechat.hefupb.com/images/chuangshe-1-icon.png"></image>-->
+                <image class="con_classL" mode="aspectFit" src="https://wechat.hefupb.com/images/chuangshe-1-icon.png"></image>
+                <view class="flex-1 con_classR">
+                    <view class="con_Txtbox">
+                        <view class="con_detail">
+                            <image src="../images/gou.png" mode="aspectFit"></image>
+                            <text>资产管理公司设立/并购</text>
+                        </view>
+                        <view class="con_detail">
+                            <image src="../images/gou.png" mode="aspectFit"></image>
+                            <text>企业实缴验资报告</text>
+                        </view>
+                        <view class="con_detail">
+                            <image src="../images/gou.png" mode="aspectFit"></image>
+                            <text>年度审计报告</text>
+                        </view>
+                        <view class="con_detail">
+                            <image src="../images/gou.png" mode="aspectFit"></image>
+                            <text>财税社保代理</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!--二-->
+        <!--<view class="flex flex-align-center con_class con_class2">-->
+            <!--<image class="con_classL" src="https://wechat.hefupb.com/images/chuangshe-2-icon.png"></image>-->
+            <!--<view class="flex-1 con_classR">-->
+                <!--<view class="con_Title">资源对接</view>-->
+                <!--<view class="con_Txtbox">-->
+                    <!--<view class="con_detail">-->
+                        <!--<image src="../images/gou.png"></image>-->
+                        <!--<text>政策咨询 </text>-->
+                    <!--</view>-->
+                    <!--<view class="con_detail">-->
+                        <!--<image src="../images/gou.png"></image>-->
+                        <!--<text>资源引介</text>-->
+                    <!--</view>-->
+                    <!--<view class="con_detail">-->
+                        <!--<image src="../images/gou.png"></image>-->
+                        <!--<text>税务筹划</text>-->
+                    <!--</view>-->
+                    <!--<view class="con_detail">-->
+                        <!--<image src="../images/gou.png"></image>-->
+                        <!--<text>退出返税</text>-->
+                    <!--</view>-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
+        <!--三-->
+        <view class="con_class con_class3">
+            <view class="con_Title">企业形象定制</view>
+            <view class="flex flex-align-center con_Content">
+                <!--<image class="con_classL" src="https://wechat.hefupb.com/images/chuangshe-3-icon.png"></image>-->
+                <image class="con_classL" mode="aspectFit" src="https://wechat.hefupb.com/images/chuangshe-3-icon.png"></image>
+                <view class="flex-1 con_classR">
+                    <view class="con_Txtbox">
+                        <view class="con_detail">
+                            <image src="../images/gou.png"></image>
+                            <text>企业标识设计</text>
+                        </view>
+                        <view class="con_detail">
+                            <image src="../images/gou.png"></image>
+                            <text>合规官网定制</text>
+                        </view>
+                        <view class="con_detail">
+                            <image src="../images/gou.png"></image>
+                            <text>其他配套设计</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--footer-->
+    <import src="../template/two_footer/two_footer.wxml" />
+    <template is="two_footer"/>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '在线咨询',btnClass:'create_consult'}}"/>-->
+</view>

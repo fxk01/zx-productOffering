@@ -1,0 +1,128 @@
+@import "../template/toast/toast.wxss";
+.loadHeader{
+    padding: 44rpx 80rpx;
+    background-color: #fff;
+}
+
+.head_bg{
+    width: 116rpx;
+    height: 118rpx;
+}
+
+.head_R{
+    padding-left: 70rpx;
+    text-align: center;
+}
+
+.headR_title{
+    color: #3088ff;
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+}
+
+.headR_txt{
+    color: #909090;
+    font-size: 26rpx;
+}
+
+/*main*/
+.loadMain{
+    margin-bottom: 36rpx;
+    background-color: #fff;
+}
+
+.main_title{
+    background-color: #f1f1f1;
+    line-height: 88rpx;
+    color: #8b8b8b;
+    font-size: 26rpx;
+    padding: 0 30rpx;
+}
+
+.min_contentBox{
+    padding: 0 30rpx;
+    border-bottom: 2rpx solid #d8d8d8;
+    min-height: 108rpx;
+    font-size: 28rpx;
+}
+
+.min_contentBoxBg{
+    background-color: #fff7f4;
+}
+
+.contentName{
+    color: #909090;
+}
+
+.contentVal{
+    padding-left:26rpx;
+    color: #323232;
+}
+
+.message{
+    background-color: #fff7f4;
+    z-index: 10;
+    position: absolute;
+    right: 30rpx;
+    font-size: 24rpx;
+    color: #e8352c;
+}
+
+.min_duty{
+    /*background-color: #fff;*/
+    /*padding: 0 30rpx;*/
+}
+
+.textareaBox{
+    padding: 0 30rpx;
+}
+
+.textareaBox textarea{
+    line-height: 36rpx;
+    padding: 20rpx 18rpx;
+    font-size: 24rpx;
+    color: #909090;
+    border-radius: 14rpx;
+    border: 2rpx solid #d2d2d2;
+    width: 100%;
+    height: 260rpx;
+    background-color:#f8f8f8 ;
+}
+/*提交*/
+.resultBtn{
+    letter-spacing:2rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    margin: 34rpx 30rpx 0;
+    font-size: 34rpx;
+    color: #fff;
+    background-color: #3088ff;
+}
+
+/*购买成功、失败*/
+.successBox,.loserBox{
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.successBox .success_Result{
+    color: #797979;
+    font-size: 28rpx;
+    padding: 80rpx 0 90rpx;
+    background-color: #fff;
+}
+
+.success_Result .result_Img{
+    margin-bottom: 10rpx;
+    width: 190rpx;
+    height: 190rpx;
+}
+
+.success_Result .result_TxtBg{
+    margin-bottom: 20rpx;
+    font-weight: bold;
+    font-size: 42rpx;
+    color: #3088ff;
+}

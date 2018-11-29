@@ -1,0 +1,32 @@
+<import src="../template/loadmore/loadmore.wxml" />
+<view class="container">
+    <image class="free_header" src="https://wechat.hefupb.com/images/tab3_bg.png"></image>
+    <view class="free_conter">
+        <view class="header_box">
+            <view class="con_head">
+                <image src="../images/tab3-icon1.png"></image>
+                <text>免费公开课</text>
+            </view>
+        </view>
+        <view class="con_content">
+            <block wx:for="{{freeItem}}" wx:key="*this" wx:for-item="freeList">
+                <view class="flex flex-justify-between listbox" data-freeid="{{freeList.id}}" bindtap="GofreeDetail">
+                    <text class="textL">{{freeList.title}}</text>
+                    <text>{{freeList.targetTime}}</text>
+                    <image wx:if="{{index<2}}" class="new_img" src="../images/tab3-new.png"></image>
+                </view>
+            </block>
+            <view>
+                <template is="zan-loadmore" data="{{...zanObj}}" />
+            </view>
+        </view>
+    </view>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--底部-->
+    <import src="../template/tabarTwo/tabarTwo.wxml" />
+    <template is="tabar_two" />
+</view>

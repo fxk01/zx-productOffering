@@ -1,0 +1,62 @@
+@import "../template/tabarTwo/tabarTwo.wxss"; /*底部导航栏*/
+.mineWrap{
+    height: 100vh;
+    line-height: normal;
+    background-color: #f1f1f1;
+}
+
+.mine_box{
+    padding: 0 40rpx;
+    border-top: 2rpx solid #f1f1f1;
+    background-color: #fff;
+    line-height: 120rpx;
+}
+
+.mine_box .mine_L image{
+    vertical-align: middle;
+    width: 52rpx;
+    height: 52rpx;
+    margin-right: 30rpx;
+}
+
+.mine_box .mine_L view{
+    font-weight: 500;
+    font-size: 38rpx;
+    color: #484848;
+}
+
+.mine_box .mine_R{
+    width: 21rpx;
+    height: 36rpx;
+}
+
+/*.mine_servicebox {*/
+    /*width: 100%;*/
+    /*height: 80rpx;*/
+    /*text-align: center;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: 520rpx;*/
+    /*font-size: 24rpx;*/
+    /*color: #333;*/
+/*}*/
+
+.serverBtn{
+    width: 100%;
+    position: absolute;
+    bottom: 516rpx;
+    border-radius: 0;
+    background-color:#f1f1f1;
+    font-size: 24rpx;
+    color: #1296db;
+}
+
+.serverBtn:after{
+    border: none;
+}
+
+.serverBtn image{
+    width: 78rpx;
+    height: 78rpx;
+    margin-bottom: 6rpx;
+}

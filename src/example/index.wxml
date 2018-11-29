@@ -1,0 +1,220 @@
+<view class="page" style="position:relative;">
+    <import src="./wxParse/wxParse.wxml"/>
+    <!--<scroll-view style="height:{{scrollHeight}}rpx;background-color:#eae8e8" scroll-y="true"  scroll-top="{{scrollTop}}">-->
+    <import src="./template/tab_panel/tab_panel.wxml" />
+        <view class="weui-tab__content3" style="min-height:1400rpx;">
+            <view class="tab3">
+                <!--<view style="padding: 15rpx 10rpx; background-color: #ffffff;">-->
+                    <!--<image class="tab3-Show" src="https://wechat.hefupb.com/images/tab3_bg.png" />-->
+                <!--</view>-->
+                <swiper class="swiper swiper-box" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+                    <block wx:for="{{SimonDrumBanner}}" wx:key="{{index}}" wx:for-index="index">
+                        <swiper-item  data-target="{{item.target}}" bindtap="Gopage">
+                            <!--open-type="contact" session-from="weapp"-->
+                            <!--<button class="swipbutton" open-type="{{item.idx=='4'?'contact':''}}" session-from="{{item.idx=='4'?'weapp':''}}">-->
+                                <image src="{{item.image}}" class="slide-image" mode="scaleToFill"/>
+                            <!--</button>-->
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <!--私募合规检查系列-->
+                <view class="tab3list" style="margin-bottom:0;">
+                    <view class="flex flex-justify-between tab3list1_title">
+                        <view class="flex">
+                            <image class="home_free_icon" src="./images/home_free_icons.png"></image>
+                            <view class="textL">{{complianceData.name?complianceData.name:'资管新规解读'}}</view>
+                        </view>
+                        <view class="textR" data-id="{{productid}}" data-showdetail="1" data-BarTitleText="{{complianceData.name}}" bindtap="golistenDetailPage">更多></view>
+                    </view>
+                    <!--音频部分-->
+                    <block wx:for="{{songlists}}" wx:key="{{index}}">
+                        <view class="flex flex-justify-between flex-align-center complianceBox">
+                            <view class="flex flex-align-center flex-1 compliance_L">
+                                <view wx:if="{{index=='0'}}" class="complianceNum">{{index+1}}</view>
+                                <view wx:elif="{{index=='1'}}" class="complianceNum complianceNum_green">{{index+1}}</view>
+                                <view wx:elif="{{index=='2'}}" class="complianceNum complianceNum_red">{{index+1}}</view>
+                                <view wx:else class="complianceNum complianceNum_yellow">{{index+1}}</view>
+                                <view>
+                                    <view class="complianceTitle">{{item.name}}</view>
+                                    <view class="complianceTxt">
+                                        <image src="./images/school_calendar.png" class="complianceSmall"></image>
+                                        <text>{{item.createTime}}</text>   <!--2018.3.16-->
+                                        <image src="./images/school_time.png" class="complianceSmall"></image>
+                                        <text>{{item.duration}}</text> <!--{{item.duration}}-->
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="compliance_R"  data-index="{{index}}" data-isPlaying="{{item.isPlaying}}" data-coverimgurl="{{item.coverImgUrl}}" data-title="{{item.name}}" data-src="{{item.mediaNew}}" data-id="{{item.id}}" bindtap="changeSong">
+                                <image hidden="{{!item.isPlaying}}" src="./images/school_start.png" class="compliance_Bg"></image>
+                                <image hidden="{{item.isPlaying}}" src="./images/school_stop.png" class="compliance_Bg"></image>
+                                <!--<image src="./images/lock.png" class="compliance_Lock"></image>-->
+                            </view>
+                        </view>
+                        <!--progress-->
+                        <!--<view class="progress-wrap flex">-->
+                            <!--<view class="begin">{{currentId==item.id?currentTime:'00:00'}}</view>-->
+                            <!--<view class="progress flex-1">-->
+                                <!--<view class="progress-bg"></view>-->
+                                <!--<view class="progress-bar" style="width: {{currentId==item.id?progressWidth:0}}%;">-->
+                                    <!--<view class="control" bind:touchstart="touchStartProgress" bind:touchmove="touchMoveProgress" bind:touchend="touchEndProgress"></view>-->
+                                <!--</view>-->
+                            <!--</view>-->
+                            <!--<view class="end">{{currentId==item.id?duration:'00:00'}}</view>-->
+                        <!--</view>-->
+                        <!--progress  -->
+                        <view class="progress">
+                            <view class="progress-bg">
+                                <view class="progress-bar" style="width: {{currentId==item.id?progressWidth:0}}%;">
+                                    <!--<view class="control" bind:touchstart="touchStartProgress" bind:touchmove="touchMoveProgress" bind:touchend="touchEndProgress"></view>-->
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+
+
+                <!--热点解读课-->
+                <view hidden="{{!hotreadList}}" class="tab3list">
+                    <view class="flex flex-justify-between tab3list2_title" catchtap="gohotreadListPage">
+                        <view class="flex">
+                            <view class="textL">{{hotreadList.name}}</view>
+                            <view class="textR">免费</view>
+                        </view>
+                        <view class="textMore">更多></view>
+                    </view>
+
+                    <block wx:for="{{hotreadList.productList}}" wx:key="{{item.id}}">
+                        <view class="flex flex-align-center hotreadBox" data-id="{{item.id}}" data-showdetail="2" data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                            <view class="hotread_L">
+                                <image src="{{item.miuNew}}"></image>
+                            </view>
+                            <view class="flex-1 hotread_R">
+                                <view class="hotreadTitle">{{item.title}}</view>
+                                <view class="hotreadTxt1">主讲人：{{item.lecturer}} </view>
+                                <view class="hotreadTxt2">更新时间：{{item.updateTime? item.updateTime: item.createTime}}</view>
+                                <!--<view class="hotreadTxt2">开课时间：{{item.time_minute}} \n {{item.time_seconds}}</view>-->
+                            </view>
+                        </view>
+                    </block>
+                </view>
+
+                <!--进阶系列课-->
+                <view hidden="{{!advList}}"  class="tab3list">
+                    <view catchtap="goadvListPage" class="flex flex-justify-between  tab3list3_title" style="border-top:6rpx solid #ebebeb;">
+                        <view class="textL">{{advList.name}}</view>
+                        <view class="textMore">更多></view>
+                    </view>
+                    <block wx:for="{{advList.productList}}" wx:key="{{item.id}}">
+                        <view class="flex flex-align-center advBox" data-id="{{item.id}}" data-showdetail="3" data-BarTitleText="{{item.title}}" catchtap="golistenDetailPage">
+                            <view class="adv_L">
+                                <image src="{{item.miuNew}}"></image>
+                            </view>
+                            <view class="flex-1 adv_R">
+                                <view class="advTitle">{{item.title}}</view>
+                                <view class="advContent line-clamp2">{{item.comment}}</view>
+                                <view class="advbom">
+                                    <text>讲师：{{item.lecturer}}</text>
+                                    <text>共{{item.period}}节课</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+
+                <!--线下活动-->
+                <view hidden="{{!offlineList}}" class="tab3list" style="border-top:6rpx solid #ebebeb;">
+                    <view catchtap="goofflineListPage" class="flex flex-justify-between  tab3list4_title">
+                        <view class="textL">{{offlineList.name}}</view>
+                        <view class="textMore">更多></view>
+                    </view>
+
+                    <!--miu;//线下私享会&#45;&#45;》targetTime （日期）-->
+                    <!--comment; //线下私享会&#45;&#45;》introduce（介绍）-->
+                    <!--price;  //线下私享会&#45;&#45;》报名结束：1.00 、立即报名标识：0.00-->
+                    <!--period; //线下私享会&#45;&#45;》site （活动地点）-->
+                    <!--lecturer; //线下私享会&#45;&#45;》targetTime（时间）-->
+
+                    <block wx:for="{{offlineList.productList}}" wx:key="{{item.id}}">
+                        <view class="offlineBox" data-id="{{item.id}}" data-price="{{item.price}}" data-BarTitleText="{{item.title}}" catchtap="GoOfflineDetailnewPage">
+                            <view class="offlineTitle">{{item.title}}</view>
+                            <view class="offlineContent line-clamp2">{{item.comment}}</view>
+                            <view class="flex flex-justify-between offlineBom">
+                                <view>{{item.miu}}</view>    <!--2017.9.10-->
+                                <!--立即报名-->
+                                <view wx:if="{{item.price=='0.00'}}" class="offline_sign">
+                                    <image src="./images/school_sign.png" class="sign_Small"></image>
+                                    <text>立即报名</text>
+                                </view>
+
+                                <!--报名已结束-->
+                                <view wx:else class="offline_sign">
+                                    <text class="singOver">已结束</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+
+
+                <!--整编：lecture;更新：proidid-->
+                <!--积募干货-->
+                <view hidden="{{!drygoodsList}}" class="tab3list">
+                    <view catchtap="godrygoodsListPage" class="flex flex-justify-between  tab3list4_title" style="border-top:6rpx solid #ebebeb;border-bottom:2rpx solid #f1f1f1;">
+                        <view class="textL">{{drygoodsList.name}}</view>
+                        <view class="textMore">更多></view>
+                    </view>
+                    <block wx:for="{{drygoodsList.productList}}" wx:key="{{item.id}}">
+                        <view class="flex grygoodsBox" data-id="{{item.id}}" data-BarTitleText="{{item.title}}" catchtap="goDrygoodsdetail">
+                            <view class="goodsL">
+                                <image src="{{item.miuNew}}"></image>
+                            </view>
+                            <view class="flex-1 goodsR">
+                                <view class="good_title">{{item.title}}</view>
+                                <view class="good_content line-clamp2">{{item.comment}}</view>
+                                <view class="good_bom">
+                                    <text class="bgf">整编：{{item.lecturer}}</text>
+                                    <text class="update">更新：{{item.period}}
+                                        <!--{{item.updateTime?item.updateTime:item.createTime}}-->
+                                    </text> <!--2018.1.-->
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+
+            <!--引用公共底部 服务热线-->
+            <!--<view class="allbomBox">-->
+                <!--<view class="serviceLine" bindtap="makePhonecall">服务热线：400-666-2398</view>-->
+                <!--<view class="workingday"> 工作日：8:30 - 17:30 </view>-->
+                <!--<image src="./images/bomBig.png" mode="aspectFit"></image>-->
+            <!--</view>-->
+        </view>
+
+
+    <view style="height:20rpx;"></view>
+    <!--<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">-->
+        <!--<view class="flex tabar_two">-->
+            <!--<navigator class="flex-1 tabLeft" url="privateSchool/privateSchool" open-type="navigate" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="images/tabBt_about.png"></image>-->
+                <!--<view>关于积募</view>-->
+            <!--</navigator>-->
+
+            <!--<navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">-->
+                <!--<button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >-->
+                    <!--<image class="tabCsImg" src="./images/zhao.png"></image>-->
+                    <!--<view>立即咨询</view>-->
+                <!--</button>-->
+            <!--</navigator>-->
+
+            <!--<navigator class="flex-1 tabRig" url="mine/mine" open-type="navigate" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="images/tabBt_mine_default.png"></image>-->
+                <!--<view>我的</view>-->
+            <!--</navigator>-->
+        <!--</view>-->
+    <!--</view>-->
+<!--</scroll-view>-->
+    <loading hidden="{{loadingHidden}}">
+        加载中
+    </loading>
+</view>

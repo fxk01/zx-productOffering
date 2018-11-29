@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="ansOnline_header">
+        <view class="ansOnline_headerCon">《基金管理人登记须知》线上答疑电话会</view>
+    </view>
+    <view class="ansOnline_main">
+        <view class="ansOnline_mainTxt">10个工作日联系证监局？</view>
+        <view class="ansOnline_mainTxt">哪些情形将不予登记？</view>
+        <view class="ansOnline_mainTxt">哪里可以查询不予登记的原因？</view>
+        <view class="ansOnline_mainTxt">哪些情形不能管理人重大事项变更？</view>
+        <view class="ansOnline_mainTxt">哪些情形必须提交法律意见书？</view>
+    </view>
+    <view class="ansOnline_footer">
+        <view class="ansOnline_fooDate">2017年12月27日  本周三  下午16:00</view>
+        <view class="ansOnline_fooMess">点击“立即报名” ， 即可参与本次线上答疑</view>
+    </view>
+    <view class="questBtnbox">
+        <button class="questionBtn1" open-type="contact" session-from="weapp">
+            <view class="Btn_txt">立即报名</view>
+        </button>
+    </view>
+</view>

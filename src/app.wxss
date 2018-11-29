@@ -1,0 +1,265 @@
+@import 'style/weui.wxss';
+/*tabCen,.tabLeft,.tabRig*/
+/*.ipxClass .tabLeft,.ipxClass .tabCen,.ipxClass .tabRig{*/
+    /*padding-top: 0!important;*/
+/*}*/
+
+.ipxClass .tabar_two{
+    height: 154rpx!important;
+}
+
+.ipxClass .tabCen{
+    margin-top: -60rpx!important;
+}
+
+.deal-thumb{
+    position: fixed;
+    z-index: 999;
+    right:10rpx;
+    top:47vh;
+    width:90rpx;
+    height: 90rpx;
+}
+
+.deal-img{
+    width:100%;
+    height: 100%;
+}
+
+page{
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+/*page {*/
+    /*background-color: #fff;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+.menu-item{
+    width: 50%;
+    text-align: center;
+    padding-top: 8px;
+}
+.menu-item2{
+    width: 24%;
+    float: left;
+    text-align: center;
+    padding-top: 8px;
+}
+.img{
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin:auto;
+}
+.clear{
+    clear: both;
+}
+.tab-bar{
+    background-color: #fff;
+    position: fixed;
+    z-index:9999;
+    width: 100%;
+}
+
+.box{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*flex*/
+.flex{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+/*flex下面的子集需要是块级元素*/
+.flex-1{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+
+.flex-row{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-col{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-justify-start{
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.flex-justify-between{
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-justify-around{
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+.flex-justify-center{
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex-align-center{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+
+/*基线对齐*/
+.flex-align-baseline{
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    -ms-grid-row-align: baseline;
+    align-items: baseline;
+}
+
+image{
+    border:0;
+    border:none;
+    vertical-align: middle;
+}
+
+/*提问按钮*/
+.questBtnbox{
+    height: 90rpx;
+}
+
+.questionBtn{
+    position: fixed;
+    bottom: 18rpx;
+    left:50%;
+    font-size: 28rpx;
+    margin-left: -355rpx;
+    width: 710rpx;
+    height: 90rpx;
+    text-align: center;
+    line-height: 90rpx;
+    background-color: #0078ff;
+    border-radius: 10rpx;
+    color:#fff;
+    z-index: 999;
+}
+
+/*显示两行，多出则省略号*/
+.line-clamp2{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+.line-clamp1{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+}
+/*公共尾部*/
+.allbomBox{
+    width:100%;
+    color:#7d7d7d;
+    text-align: center;
+    height: 350rpx;
+    font-size: 22rpx;
+    background-color: #eae8e8;
+    line-height: 40rpx;
+}
+.allbomBox image{
+    width:170rpx;
+    height:83rpx;
+}
+
+.allbomBox .serviceLine{
+    padding-top:30rpx;
+}
+
+.allbomBox .workingday{
+    margin-bottom: 18px;
+}
+
+
+@keyframes slides{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-10%);
+    }
+}
+
+@-webkit-keyframes slides {
+    from{
+        -webkit-transform: translateY(0%);
+    }
+    to{
+        -webkit-transform: translateY(-10%);
+    }
+}
+
+.button_getUser:after{
+    border: none;
+}

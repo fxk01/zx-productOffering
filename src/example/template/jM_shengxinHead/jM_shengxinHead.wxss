@@ -1,0 +1,55 @@
+.recordHeader{
+    width:100%;
+    text-align: center;
+    height:450rpx;
+    color:#fff;
+    background-color: #ffbd00;
+}
+
+.recordHeader .headTitle{
+    font-size: 74rpx;
+    font-weight:700;
+    padding: 62rpx 0 18rpx;
+}
+
+.recordHeader .headDetil{
+    font-size: 28rpx;
+}
+
+.recordHeader .headCon{
+    padding-top: 64rpx;
+}
+
+.headCon .headconChoice{
+    position: relative;
+}
+
+.headconPosi1:after,.headconPosi2:after {
+    content: "";
+    width: 2rpx;
+    height: 54rpx;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.headCon .headconChoice image{
+    width:48rpx;
+    height: 56rpx;
+}
+
+.headCon .headconPosi1 image{
+    width:55rpx;
+    height: 56rpx;
+}
+
+.headCon .headconPosi2 image{
+    width:45rpx;
+    height: 56rpx;
+}
+
+.headCon .headconChoice .headconTxt{
+    font-size: 24rpx;
+    padding-top:14rpx;
+}

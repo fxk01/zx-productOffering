@@ -1,0 +1,57 @@
+{
+  "pages": [
+
+    "example/index",
+    "example/advList/advList",
+    "example/drygoodsList/drygoodsList",
+    "example/offlineList/offlineList",
+    "example/hotreadList/hotreadList",
+    "example/dryGoods/dryGoods",
+    "example/calendar/calendar",
+    "example/mycollection/mycollection",
+    "example/buyCourse/buyCourse",
+    "example/mine/mine",
+    "example/haveActive/haveActive",
+    "example/offlineDetailnew/offlineDetailnew",
+    "example/courseDownload/courseDownload",
+    "example/listenDetail/listenDetail",
+    "example/activyRegistration/activyRegistration",
+    "example/dryGoodsdetail/dryGoodsdetail",
+    "example/dryGoodsForm/dryGoodsForm",
+    "example/listenpay/listenpay",
+    "example/pay/pay",
+    "example/detail/detail",
+    "example/enrollment/enrollment",
+    "example/newBj/newBj",
+    "example/answer/answer",
+    "example/hah/hah"
+  ],
+
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#afafaf",
+    "selectedColor": "#477fff",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "example/index",
+        "iconPath": "example/images/home-deflut.png",
+        "selectedIconPath": "example/images/home-pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "example/mine/mine",
+        "iconPath": "example/images/me-delfut.png",
+        "selectedIconPath": "example/images/me-pressed.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}

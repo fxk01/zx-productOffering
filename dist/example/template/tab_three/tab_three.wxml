@@ -1,0 +1,133 @@
+<template name="tab_three">
+    <import src="../../wxParse/wxParse.wxml"/>
+    <view class="tab3">
+        <view style="padding: 15rpx 10rpx; background-color: #ffffff;">
+            <image class="tab3-Show" src="https://wechat.hefupb.com/images/tab3_bg.png" />
+        </view>
+        <view class="tab3-list1" style="background-color: #ffffff;">
+            <view style="text-align: left; display: inline-block;">
+                <image class="tab3-ic1" src="./images/tab3-icon1.png" />
+                <text class="tab3-gkk">免费公开课</text>
+            </view>
+
+            <text class="tab3-gd" catchtap="Gofreecourses">更多</text>
+
+            <view class="page__bd" style="margin-top: 25rpx;">
+                <view class="weui-cells weui-cells_after-title">
+                    <block wx:for="{{freeItem}}"  wx:key="{{index}}">
+                        <view class="weui-cell weui-cell_access" data-freeid="{{item.id}}" bindtap="GofreeDetail">
+                            <view class="weui-cell__bd">
+                                <!--wx:if="{{item.id=='1' || item.id=='2'}}"-->
+                                <image class="tab3-new" src="./images/tab3-new.png" />
+                                <view class="free_txt">{{item.title}}</view>
+                            </view>
+                            <view class="weui-cell__ft" style="color: #393939;font-size: 30rpx;">{{item.targetTime}}</view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+
+        <view class="tab3-list1" style="margin-top: 20rpx; padding-top: 10px; background-color: #ffffff;">
+            <view style="text-align: left; display: inline-block;">
+                <image class="tab3-ic1" src="./images/tab3-icon2.png" />
+                <text class="tab3-gkk">进阶系列课</text>
+            </view>
+
+            <text class="tab3-gd" catchtap="Goadvcourses">更多</text>
+
+            <view class="page__bd" style="margin-top: 25rpx;">
+                <view class="weui-cells weui-cells_after-title">
+
+
+                    <!--<view class="weui-cell" style="border-bottom:2rpx solid #eae8e8;" data-advid="1" bindtap="GoadvDetail">-->
+                        <!--<view class="weui-cell__hd" style="position: relative;margin-right: 10px;">-->
+                            <!--<image src="https://wechat.hefupb.com/images/tab3-listgz.jpg" style="width: 200rpx; height: 160rpx; display: block"/>-->
+                        <!--</view>-->
+                        <!--<view class="weui-cell__bd">-->
+                            <!--<view class="cenR_jtil">基金估值FA</view>-->
+                            <!--<view style="font-size: 24rpx; color: #393939; display: inline-block;">-->
+                                <!--<image class="tab3-ic1" src="./images/tab3-clock.png" />-->
+                                <!--学习时长:3个月-->
+                            <!--</view>-->
+                            <!--<view style="font-size: 24rpx; color: #393939; display: inline-block; margin-left: 20rpx;">-->
+                                <!--<image class="tab3-ic1" src="./images/tab3-em.png" />-->
+                                <!--主讲老师:李响-->
+                            <!--</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+
+                    <!--<view class="weui-cell" style="border-bottom:2rpx solid #eae8e8;" data-advid="2" bindtap="GoadvDetail">-->
+                        <!--<view class="weui-cell__hd" style="position: relative;margin-right: 10px;">-->
+                            <!--<image src="https://wechat.hefupb.com/images/tab3-listsj.jpg" style="width: 200rpx; height: 160rpx; display: block"/>-->
+                        <!--</view>-->
+                        <!--<view class="weui-cell__bd">-->
+                            <!--<view class="cenR_jtil">政府出资产业投资产品设计</view>-->
+                            <!--<view style="font-size: 24rpx; color: #393939; display: inline-block;">-->
+                                <!--<image class="tab3-ic1" src="./images/tab3-clock.png" />-->
+                                <!--学习时长:3个月-->
+                            <!--</view>-->
+                            <!--<view style="font-size: 24rpx; color: #393939; display: inline-block; margin-left: 20rpx;">-->
+                                <!--<image class="tab3-ic1" src="./images/tab3-em.png" />-->
+                                <!--主讲老师:陆雅-->
+                            <!--</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+
+                    <!--展示数据 advItem-->
+                    <block wx:for="{{advItem}}"  wx:key="{{index}}">
+                        <view class="weui-cell" style="border-bottom:2rpx solid #eae8e8;" data-advid="{{item.id}}" bindtap="GoadvDetail">
+                            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                                <image src="{{item.miu}}" style="width: 200rpx; height: 160rpx; display: block"/>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <view class="cenR_jtil">{{item.title}}</view>
+                                <view style="font-size: 22rpx; color: #393939; display: inline-block;">
+                                    <image class="tab3-ic1" src="./images/tab3-clock.png" />
+                                    {{item.period}} <!--学习时长 -->
+                                </view>
+                                <view style="font-size: 22rpx; color: #393939; display: inline-block; margin-left: 20rpx;">
+                                    <image class="tab3-ic1" src="./images/tab3-em.png" />
+                                    {{item.lecturer}} <!--主讲老师 -->
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+            </view>
+        </view>
+
+
+    </view>
+
+        <view class="tab3-list1" style="margin-top: 20rpx; padding-top: 10px; background-color: #ffffff;">
+            <view style="text-align: left; display: inline-block;">
+                <image class="tab3-ic1" src="./images/tab-icon3.png" />
+                <text class="tab3-gkk">线下私享会</text>
+            </view>
+
+            <text class="tab3-gd"  catchtap="Gooffline">更多</text>
+            <view class="page__bd" style="margin-top: 25rpx;">
+                <view class="weui-cells weui-cells_after-title">
+                    <!--展示数据offlineItem-->
+                    <block wx:for="{{offlineItem}}"  wx:key="{{index}}">
+                        <view class="weui-cell" style="border-bottom:2rpx solid #eae8e8;" data-id="{{item.id}}" bindtap="GoofflineDetail">
+                            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                                <image src="{{item.miu}}" style="width: 200rpx; height: 160rpx; display: block"/>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <view class="cenR_title">{{item.title}}</view>
+                                <view class="cenR_detail">
+                                    {{item.content}}
+                                </view>
+                                <!--<view class="cenR_detail">-->
+                                    <!--<template is="wxParse" data="{{wxParseData:profileTemArray[index]}}"/>-->
+                                <!--</view>-->
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

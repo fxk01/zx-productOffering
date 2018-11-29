@@ -1,0 +1,91 @@
+@import "../../wxParse/wxParse.wxss";
+.tab3 {}
+.tab3-Show {
+    width: 100%;
+    height: 310rpx;
+}
+.tab3-ic1 {
+    width: 26rpx;
+    height: 25rpx;
+    text-align: left;
+}
+.tab3-gkk {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #393939;
+    margin-left: 15rpx;
+}
+.tab3-list1 {
+    padding: 0 30rpx 30rpx 30rpx;
+    text-align: left;
+    vertical-align: middle;
+}
+.tab3-gd {
+    font-size:12px;
+    color:#393939;
+    border:1px solid #146fff;
+    border-radius:5px;
+    padding:5px;
+    vertical-align: bottom;
+    margin:0 10rpx;
+    width: 100rpx;
+    display: inline-block;
+    text-align: center;
+    float: right;
+}
+
+.tab3-new{
+    position: absolute;
+    width:31rpx;
+    height:40rpx;
+    animation:slides 0.64s infinite 0s;
+}
+
+.weui-cell:before {
+    border-top:0;
+}
+.weui-cells:after {
+    border-bottom: 0;
+}
+.weui-cell {
+    padding: 10px 0;
+    position:relative;
+}
+
+.cenR_jtil{
+    padding-top:10rpx;
+    padding-bottom:26rpx;
+    color:#161616;
+    font-weight:600;
+    font-size:32rpx;
+}
+
+.cenR_title{
+    padding-bottom:10rpx;
+    color:#161616;
+    font-weight:600;
+    line-height:38rpx;
+    font-size:32rpx;
+}
+
+.cenR_detail{
+    line-height:30rpx;
+    color:#909090;
+    font-size:24rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+.free_txt{
+    max-width:415rpx;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30rpx;
+    margin-left: 42rpx;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}

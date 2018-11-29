@@ -1,0 +1,83 @@
+@import "../template/tabarTwo/tabarTwo.wxss";
+@import "../template/loadmore/loadmore.wxss";
+.container{
+    position: relative;
+    min-height: 100vh;
+    line-height: normal;
+    background-color: #eae8e8;
+}
+
+.container .free_header{
+    width:100%;
+    height: 300rpx;
+}
+
+.header_box {
+    padding:0 25rpx;
+}
+
+.adva_center{
+    background-color: #fff;
+}
+
+.adva_center .con_head{
+    color:#393939;
+    line-height: 90rpx;
+    font-size:36rpx;
+    border-bottom: 2rpx solid #eae8e8 ;
+}
+
+.adva_center .con_head image{
+    width:26rpx;
+    height: 25rpx;
+    margin-right: 12rpx;
+}
+
+.center_box{
+    height: 120rpx;
+    padding: 20rpx 24rpx;
+    border-bottom: 2rpx solid #eae8e8;
+}
+
+.center_box .cenL_img{
+    width: 160rpx;
+    height: 120rpx;
+}
+
+.center_box .cenR{
+    padding-left: 28rpx;
+}
+
+.center_box .cenR_title{
+    padding-top: 10rpx;
+    padding-bottom: 30rpx;
+    color: #161616;
+    font-weight: 600;
+    font-size: 32rpx;
+}
+
+.center_box .cenR_detail{
+    color: #84898b;
+    font-size: 20rpx;
+}
+
+.center_box .studyTimer{
+    display: inline-block;
+}
+.center_box .studyTimer image{
+    width:18rpx;
+    height: 18rpx;
+    margin-right: 8rpx;
+}
+
+.center_box .teacher{
+    display: inline-block;
+    padding-left: 20rpx;
+}
+
+.center_box .teacher image{
+    width:20rpx;
+    height: 20rpx;
+    margin-right: 8rpx;
+}
+

@@ -1,0 +1,115 @@
+@import "../dryGoods/dryGoods.wxss";
+
+.buyCourse_Wrap{
+    background-color:#f1f1f1;
+    min-height: 100vh;
+}
+
+.tab3list{
+    background-color: #fff;
+    margin-bottom: 16rpx;
+}
+
+/*2.热点解读课*/
+.tab3list2_title,.tab3list3_title,.tab3list4_title{
+    line-height: 90rpx;
+    padding: 0 30rpx;
+}
+
+.tab3list2_title .textL,.tab3list3_title .textL,.tab3list4_title .textL{
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #444;
+}
+
+.tab3list2_title .textR{
+    padding-left: 14rpx;
+    font-size: 30rpx;
+    color: #ff40ee;
+}
+
+.hotreadBox{
+    border-top: 2rpx solid #f1f1f1;
+    padding: 28rpx 30rpx;
+}
+
+.hotreadBox .hotread_L{
+    background-color: #e7e7e7;
+    width: 200rpx;
+    height: 160rpx;
+}
+
+.hotreadBox .hotread_L image{
+    width: 100%;
+    height: 100%;
+}
+
+.hotreadBox .hotread_R{
+    padding-left: 30rpx;
+}
+
+.hotread_R .hotreadTitle{
+    /*height: 78rpx;*/
+    /*margin-bottom: 10rpx;*/
+    line-height:38rpx ;
+    padding-top: 6rpx;
+    margin-bottom: 28rpx;
+    font-weight: bold;
+    font-size: 32rpx;
+    color: #202020;
+}
+
+.hotread_R .hotreadTxt1,.hotread_R .hotreadTxt2{
+    font-size: 26rpx;
+    color: #909090;
+}
+
+.hotread_R .hotreadTxt1{
+    margin-right: 28rpx;
+    /*margin-bottom: 10rpx;*/
+}
+
+/*进阶系列课*/
+.advBox{
+    padding: 30rpx;
+    border-top:2rpx solid #f1f1f1;
+}
+
+.adv_L{
+    background-color: #e7e7e7;
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.adv_L image{
+    width: 100%;
+    height: 100%;
+}
+
+.adv_R{
+    padding-left: 30rpx;
+}
+
+.advTitle{
+    font-weight: bold;
+    margin-bottom: 6rpx;
+    font-size: 32rpx;
+    color: #202020;
+}
+
+.advContent{
+    line-height: 34rpx;
+    font-size: 26rpx;
+    color: #909090;
+    margin-bottom: 30rpx;
+}
+
+.advbom{
+    font-size: 26rpx;
+    color: #1b356f;
+}
+
+.advbom text{
+    display: inline-block;
+    margin-right: 30rpx;
+}

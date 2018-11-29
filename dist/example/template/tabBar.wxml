@@ -1,0 +1,15 @@
+<template name="tabBar">
+    <view class="tab-bar" style="display: flex; color: {{tabBar.color}}; background: {{tarBar.backgroundColor}}; {{tabBar.position=='top'? 'top: 0' : 'bottom: 0'}}; {{tabBar.borderStyle? (tabBar.position=='top'? 'border-bottom: solid 1px '+tabBar.borderStyle + ';' : 'border-top: solid 1px '+tabBar.borderStyle + ';') : ''}}">
+        <button open-type="contact" session-from="weapp" style="position: absolute; left:50%; z-index:999; width:82px; height:82px; padding:0; margin-left:-41px; top:-13%;">
+            <image style="width:82px; height:82px;" src="./images/foot-jz.png" />
+        </button>
+        <block wx:for="{{tabBar.list}}" wx:key="pagePath">
+            <navigator url="{{item.pagePath}}" open-type="switchTab" class="{{item.clas}}" style="{{item.active ? '' : 'color: '+(item.selectedColor ? item.selectedColor : tabBar.selectedColor)}}">
+                <image src="{{item.selectedIconPath}}" wx:if="{{item.active}}" class="img" />
+                <image src="{{item.iconPath}}" wx:if="{{!item.active}}" style="{{item.width}}" class="img" />
+                <text style="font-size: 12px;">{{item.text}}</text>
+            </navigator>
+        </block>
+        <view class="clear"></view>
+    </view>
+</template>

@@ -1,0 +1,33 @@
+<view class="containerbox">
+    <view class="container">
+        <!--<view class="searchBox flex flex-align-center flex-justify-center">-->
+            <!--<image src="../images/search_icon.png" mode="aspectFit"></image>-->
+            <!--<input placeholder="搜索" />-->
+        <!--</view>-->
+        <!--问答-->
+        <block wx:for="{{comlist}}" wx:for-index="index">
+            <view class="comaskBox flex flex-justify-between" catchtap="getComaskTxt" data-item-id="{{item.id}}">
+                <view class="flex">
+                    <image class="ask_img" src="../images/ask_icon.png" mode="aspectFit"></image>
+                    <view class="comaskCon flex-1">
+                        <view class="comaskTitle">{{item.comaskTitle}}</view>
+                        <view class="comaskTxt" hidden="{{!item.block}}">{{item.comaskTxt}}</view>
+                    </view>
+                </view>
+                <view class="dropThumb">
+                    <image wx:if="{{item.block}}" class="dropmenu" src="../images/drop-up.png" mode="aspectFit"></image>
+                    <image wx:else class="dropmenu" src="../images/drop-down.png" mode="aspectFit"></image>
+                </view>
+            </view>
+        </block>
+
+    </view>
+
+    <!--引用公共底部 服务热线-->
+    <!--<import src="../template/allbom.wxml" />-->
+    <!--<template is="allBom" />-->
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '立即提问'}}"/>-->
+</view>

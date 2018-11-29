@@ -1,0 +1,38 @@
+<template name="tabar_two">
+    <view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">
+        <view class="flex tabar_two">
+            <!--catchtap="homebackPage"-->
+            <navigator class="flex-1 tabLeft"  url="/example/index" open-type="switchTab" hover-class="tabar_active">
+                <!--<button class="cancel_default" open-type="contact" session-from="weapp" >-->
+                    <!--<image class="tabBtImg" src="{{tabar_two.leftIcon}}"></image>-->
+                    <!--<view>{{tabar_two.leftTxt}}</view>-->
+                <!--</button>-->
+                <image class="tabBtImg" src="../images/home-deflut.png"></image>
+                <view>首页</view>
+            </navigator>
+
+            <view wx:if="{{mainPurchase=='0'?true:false}}" class="flex-1 flex-col flex-justify-center tabCen" url="" catchtap="payFn"  hover-class="tabar_active">
+                <!--<button class="cancel_default" open-type="contact" session-from="weapp" >-->
+                    <image class="tabCsImg" src="{{tabar_two.centerIcon1}}"></image>
+                    <!--<view style="line-height:normal;">{{tabar_two.centerTxt}}</view>-->
+                <view style="line-height:normal;">{{tabar_two.centerTxt1}}</view>
+                <!--</button>-->
+            </view>
+            <view wx:else class="flex-1 flex-col flex-justify-center tabCen" url="" catchtap="goCourseDownloadFn"  hover-class="tabar_active">
+                <!--<button class="cancel_default" open-type="contact" session-from="weapp" >-->
+                <image class="tabCsImg" src="{{tabar_two.centerIcon2}}"></image>
+                <!--<view style="line-height:normal;">{{tabar_two.centerTxt}}</view>-->
+                <view style="line-height:normal;">{{tabar_two.centerTxt2}}</view>
+                <!--</button>-->
+            </view>
+
+            <navigator class="flex-1 tabRig" url="{{tabar_two.rightUrl}}" open-type="switchTab" hover-class="tabar_active">
+                <!--<view class="flex-1 tabRig">-->
+                <image class="tabBtImg" src="../images/me-delfut.png"></image>
+                <view>{{tabar_two.rightTxt}}</view>
+                <!--</view>-->
+            </navigator>
+
+        </view>
+    </view>
+</template>

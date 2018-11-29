@@ -1,0 +1,103 @@
+@import "../template/jMheader/jMheader.wxss";
+.container{
+    background-color:#fff;
+}
+
+.jm_header .jm_headTxt {
+    font-weight:500;
+    color:#323232;
+    font-size:30rpx;
+}
+
+.container .content{
+    margin-bottom: 60rpx;
+}
+
+.torialBox{
+    padding:46rpx 30rpx 0;
+}
+
+.torialLimg{
+    width:70rpx;
+    height: 70rpx;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.torialLimg_yellow{
+    background-color:#ffc600;
+}
+
+.torialLimg_red{
+    background-color:#ff0000;
+}
+
+.torialLimg_blue{
+    background-color:#0084e5;
+}
+
+.torialLimg_cyan{
+    background-color:#92d050;
+}
+
+.torialBox .torialRig{
+    padding:0 24rpx 20rpx;
+}
+
+.torialRig .torialTitle{
+    min-height: 60rpx;
+    font-size: 40rpx;
+    color:#0380ff;
+}
+
+.torialRig .torialTxt{
+    line-height: 46rpx;
+    font-size: 24rpx;
+    color:#909090;
+}
+
+.torialLine{
+    width:83%;
+    margin:0 auto;
+    height: 2rpx;
+    background-color: #f0f0f0;
+}
+
+.themess{
+    padding-left: 100rpx;
+    padding-top:44rpx;
+    /*text-align: center;*/
+    font-size: 30rpx;
+    color:#909090;
+    line-height: 60rpx;
+}
+
+.design_con {
+    padding:0 36rpx;
+}
+
+
+.design_conTitBox{
+    padding-top: 36rpx;
+}
+
+.design_conTitBox .design_conTit{
+    display: inline-block;
+    padding-left: 20rpx;
+    margin-bottom: 24rpx;
+    color: #5993f5;
+    font-weight: 500;
+    font-size: 40rpx;
+    letter-spacing: 2rpx;
+    border-left: 4rpx solid #ff0826;
+}
+
+.design_mess{
+    margin-bottom: 80rpx;
+    font-size: 28rpx;
+    color: #565656;
+}
+

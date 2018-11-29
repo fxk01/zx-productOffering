@@ -1,0 +1,49 @@
+@import "../template/jM_shengxinHead/jM_shengxinHead.wxss";
+@import "../template/two_footer/two_footer.wxss";
+@import "../template/bar1/bar1.wxss";
+.container{
+    position: relative;
+    line-height: normal;
+}
+.recordHeader{
+    background-color: #3569ff;
+}
+
+.content_center{
+    width:100%;
+    background-color: #eae8e8;
+    padding:12rpx 16rpx 10rpx;
+}
+
+.classi_box{
+    padding: 18rpx 30rpx 36rpx;
+    background-color: #fff;
+    width:100%;
+    margin-bottom: 10rpx;
+    border-radius: 6rpx;
+}
+
+.classi_box:nth-child(odd){
+    border-left: 10rpx solid #3569ff;
+}
+
+.classi_box:nth-child(even){
+    border-left: 12rpx solid #ffcc00;
+}
+
+.classi_box:last-child{
+    margin-bottom: 0;
+}
+
+.classi_Tit{
+    font-weight:600;
+    padding: 26rpx 0;
+    font-size: 38rpx;
+    color: #404040;
+}
+
+.classi_Detail{
+    line-height: 36rpx;
+    font-size: 24rpx;
+    color: #595758;
+}

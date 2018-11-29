@@ -1,0 +1,41 @@
+<view class="container">
+    <!--引用积募头部-->
+    <import src="../template/jMheader/jMheader.wxml" />
+    <template is="jm_header" data="{{jMhidden: true}}"/>
+    <!--填写信息-->
+    <view class="info_center">
+        <view class="info_title">
+            <text>填写基本信息 立即接入服务</text>
+        </view>
+        <view class="info_subtitle">
+            <text>我们的工作人员会在1-2工作日联系您</text>
+        </view>
+        <view class="info_box deilservice">
+            办理服务：<text>{{flag}}</text>
+        </view>
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-xm-icon.png"></image>
+            <input placeholder="您的姓名" class="flex-1" placeholder-class="inp_holder" bindinput="getName"/>
+        </view>
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-jg-icon.png"></image>
+            <input placeholder="您的机构" class="flex-1" placeholder-class="inp_holder" bindinput="getMechanism"/>
+        </view>
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-shouji-icon.png"></image>
+            <input type="number" placeholder="您的手机号" class="flex-1" placeholder-class="inp_holder" bindinput="getPhone"/>
+        </view>
+        <!--提示信息-->
+        <view hidden="{{!reminder}}" class="reminder">
+            提示：{{reminder}}
+        </view>
+        <view class="btnBox">
+             <button disabled="{{!nameHighlight || !orgHighlight || !phoneHighlight || disabled}}" class="inBtn" catchtap="Submit">提交</button>
+        </view>
+    </view>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+</view>

@@ -1,0 +1,81 @@
+
+.footer{
+    background-color: #eae8e8;
+}
+
+.footer .foot_handle{
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 66rpx;
+    margin-bottom: 10rpx;
+}
+
+.footer .fooTit{
+    padding-top: 34rpx;
+    font-size: 30rpx;
+    padding-bottom: 20rpx;
+}
+
+.foot_handle .fooDetail{
+    color:#acacac;
+    font-size: 20rpx;
+}
+
+.foot_handle .fooProcess{
+    position: relative;
+    padding-top: 50rpx;
+    font-size: 22rpx;
+}
+
+.fooProcess .fooLine{
+    position: absolute;
+    width:70%;
+    left:50%;
+    top:89rpx;
+    margin-left: -35%;
+    height: 2rpx;
+    background-color: #1d2088;
+}
+
+.fooProcess .pro_numbox{
+    position: relative;
+    padding:0 24rpx;
+    background-color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+.fooProcess .pro_number{
+    display: inline-block;
+    width:80rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #0b69ff;
+    color:#fff;
+    font-size: 54rpx;
+    margin-bottom: 32rpx;
+    border:2rpx solid #1d2088;
+    border-radius: 50%;
+}
+
+.footer .footprofile{
+    background-color: #fff;
+    margin-bottom: 50rpx;
+}
+
+.footprofile .fooTit{
+    text-align: center;
+}
+
+.footprofile .fileContop,.footprofile .fileConbom{
+    font-size: 19rpx;
+    padding:0 38rpx;
+    color:#323232;
+    line-height: 30rpx;
+}
+
+.footprofile .fileContop{
+    margin-bottom: 8rpx;
+}
+

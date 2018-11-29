@@ -1,0 +1,68 @@
+<view class="container">
+    <view class="actiinfo_title">活动信息</view>
+    <view class="actiinfo_sub">10万亿时代 监管聚变，合规进化系列论坛</view>
+    <view class="actiinfoCen">
+        <view class="actiinfoCen_tit">活动安排</view>
+        <view class="actiinfoCen_con">
+            <view>时间：12月20日下午15:30-18:30</view>
+            <view>地点：北京市朝阳区工体北路4号院80 office三层（科技寺）</view>
+            <view>主办方：积募</view>
+            <view>社区合作伙伴：科技寺</view>
+        </view>
+
+        <view class="actiinfoCen_tit">活动议程</view>
+        <view class="actiinfoCen_con">
+            <view>15:30-16:00  签到</view>
+            <view>16:00-17:00  联合监管下，委外和FOF何去何从</view>
+            <view>17:00-18:00  监管要点解析，让合规在运营中落地</view>
+            <view>18:00-18:30  交流问答环节</view>
+        </view>
+
+        <view class="actiinfoCen_tit">演讲嘉宾</view>
+        <view class="actiinfoCen_sub">李响</view>
+        <view class="actiinfoCen_con" style="margin-bottom:34rpx;">
+            <view>上海合富金融信息服务有限公司副总经理。原某大型券商资管估值业务负责人，负责万亿级别的资管产品估值业务；曾在全球最大基金行政服务公司思高方达（CITCO）任基金运营主管，有超十年基金运营工作经历。</view>
+        </view>
+
+        <view class="actiinfoCen_sub">赵静</view>
+        <view class="actiinfoCen_con" style="margin-bottom:30rpx;">
+            <view>赵小姐，联合创立国内领先的独立第三方基金服务品牌“积募”；曾任职于国内知名金融机构，打造过多个具有影响力的服务品牌；已持续服务于上百家机构。</view>
+        </view>
+    </view>
+    <!--填写信息-->
+    <view class="info_center">
+        <view class="info_title">
+            <text>活动报名</text>
+        </view>
+        <view class="info_subtitle">
+            <text>报名成功我们会以短信的方式通知您</text>
+        </view>
+        <!--<view class="info_box deilservice">-->
+            <!--办理服务：<text>{{flag}}</text>-->
+        <!--</view>-->
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-xm-icon.png"></image>
+            <input placeholder="您的姓名" class="flex-1" placeholder-class="inp_holder" bindinput="getName"/>
+        </view>
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-jg-icon.png"></image>
+            <input placeholder="您的机构" class="flex-1" placeholder-class="inp_holder" bindinput="getMechanism"/>
+        </view>
+        <view class="flex flex-align-center info_box">
+            <image src="../images/shiyong-shouji-icon.png"></image>
+            <input type="number" placeholder="您的手机号" class="flex-1" placeholder-class="inp_holder" bindinput="getPhone"/>
+        </view>
+        <!--提示信息-->
+        <view hidden="{{!reminder}}" class="reminder">
+            提示：{{reminder}}
+        </view>
+        <view class="btnBox">
+            <button disabled="{{!nameHighlight || !orgHighlight || !phoneHighlight || disabled}}" class="inBtn" catchtap="Submit">提交</button>
+        </view>
+    </view>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+</view>

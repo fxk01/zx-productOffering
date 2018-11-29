@@ -1,0 +1,59 @@
+<view class="mineWrap">
+    <view class="flex flex-align-center flex-justify-between mine_box" catchtap="gobuyCourse">
+        <view class="flex flex-align-center mine_L">
+            <image src="../images/mine_buyclass.png"></image>
+            <!--已购项目-->
+            <view>我的课程</view>
+        </view>
+        <image src="../images/icon_Right.png" class="mine_R"></image>
+    </view>
+    <view class="flex flex-align-center flex-justify-between mine_box" catchtap="gohaveActive">
+        <view class="flex flex-align-center mine_L">
+            <image src="../images/mine_activity.png"></image>
+            <!--已报活动-->
+            <view>我的活动</view>
+        </view>
+        <image src="../images/icon_Right.png" class="mine_R"></image>
+    </view>
+    <view class="flex flex-align-center flex-justify-between mine_box" catchtap="gomycollection">
+        <view class="flex flex-align-center mine_L">
+            <image src="../images/mine_save.png"></image>
+            <view>我的收藏</view>
+        </view>
+        <image src="../images/icon_Right.png" class="mine_R"></image>
+    </view>
+    <!--<view class="tabar_twoBox {{isIphoneX?'ipxClass':''}}">-->
+        <!--<view class="flex tabar_two">-->
+            <!--<navigator class="flex-1 tabLeft" url="../index?activeIndex=2" open-type="redirect" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="../images/home_default.png"></image>-->
+                <!--<view>首页</view>-->
+            <!--</navigator>-->
+
+            <!--<navigator class="flex-1 flex-col flex-justify-center tabCen" url=""  hover-class="tabar_active">-->
+                <!--<button class="cancel_default homeCancel" open-type="contact" session-from="weapp" >-->
+                    <!--<image class="tabCsImg" src="../images/zhao.png"></image>-->
+                    <!--<view>立即咨询</view>-->
+                <!--</button>-->
+            <!--</navigator>-->
+
+            <!--<view class="flex-1 tabRig" hover-class="tabar_active">-->
+                <!--<image class="tabBtImg" src="../images/tabBt_mine_active.png"></image>-->
+                <!--<view class="tabar_active">我的</view>-->
+            <!--</view>-->
+
+        <!--</view>-->
+    <!--</view>-->
+    <!--<view class="mine_servicebox">-->
+        <!--<view>-->
+            <!--<contact-button type="default-dark" size="25" session-from="weapp">-->
+            <!--</contact-button>-->
+        <!--</view>-->
+        <!--<text>联系客服</text>-->
+    <!--</view>-->
+
+    <button open-type="contact" session-from="weapp"  class="serverBtn">
+        <image src="../images/server.png"></image>
+        <view>联系客服</view>
+    </button>
+
+</view>

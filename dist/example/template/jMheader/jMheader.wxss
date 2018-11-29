@@ -1,0 +1,23 @@
+.jm_header{
+    background-color: #fff;
+    text-align: center;
+    padding:42rpx 0 40rpx;
+}
+
+.jm_header .jm_headImg{
+    width:244rpx;
+    height:119rpx;
+    margin-bottom: 20rpx;
+}
+
+.jm_headTit{
+    font-weight: 500;
+    color:#323232;
+    font-size: 30rpx;
+    padding-bottom:6rpx;
+}
+
+.jm_header .jm_headTxt{
+    font-size: 20rpx;
+    color: #909090;
+}

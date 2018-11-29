@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="deal-thumb design_thumb" bindtap="Gofillinformation">
+        <image class="deal-img" src="../images/deal.png" mode="aspectFill"></image>
+    </view>
+    <import src="../template/jM_shengxinHead/jM_shengxinHead.wxml" />
+    <template is="jm_shengxinHead" data="{{headTitle:'积募产品设计服务',headDetil:'贴近监管与业务实际，丰富的产品设计经验',headconTxt1:'经验丰富',headconTxt2:'值得信赖',headconTxt3:'专业高效',headcon_img1:'../images/reco_choice.png',headcon_img2:'../images/reco_partner.png',headcon_img3:'../images/reco_efficiency.png' }}"/>
+
+    <!--center-->
+    <view class="box content_center">
+        <view class="box classi_box">
+            <view class="classi_Tit">项目尽调筛选</view>
+            <view class="classi_Detail">挖掘拟投企业价值及潜在风险，为投资决策提供背景资料。审核拟定投资协议、保密协议等相关交易文件，为交易顺利进行保驾护航。</view>
+        </view>
+
+        <view class="box classi_box">
+            <view class="classi_Tit">交易结构设计</view>
+            <view class="classi_Detail">资金募集与出资安排、内部组织架构设置和投决风格、交易模式、收益分配计划等，提供基金产品的个性化定制服务。</view>
+        </view>
+
+        <view class="box classi_box">
+            <view class="classi_Tit">风控方案制定</view>
+            <view class="classi_Detail">协助设计风控细节，部署风控系统，实施日常风控管理。</view>
+        </view>
+
+        <view class="box classi_box">
+            <view class="classi_Tit">产品发行管理</view>
+            <view class="classi_Detail">高效对接基金托管外包、估值运营及投资交易等各个环节，协助基金管理人拟定合同协议及产品备案登记。</view>
+        </view>
+
+        <view class="box classi_box">
+            <view class="classi_Tit">退出税务筹划</view>
+            <view class="classi_Detail">综合考虑退出收益、退出效率、退出成本、退出风险等要素，设计产品退出方案。对接各类政策扶持的基金小镇，进行退出税务筹划。</view>
+        </view>
+    </view>
+
+    <!--footer-->
+    <import src="../template/two_footer/two_footer.wxml" />
+    <template is="two_footer"/>
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '在线咨询',btnClass:'design_consult'}}"/>-->
+
+</view>

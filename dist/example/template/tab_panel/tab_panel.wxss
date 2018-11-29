@@ -1,0 +1,61 @@
+.tab_panelList{
+    position: relative;
+    width:730rpx;
+    height:310rpx;
+    background-color: #fff;
+    padding:15rpx 10rpx;
+    /*margin-bottom: 14rpx;*/
+}
+
+.pannel_big{
+    position: absolute;
+    width:730rpx;
+    height:310rpx;
+    top:15rpx;
+    left:10rpx;
+    z-index: 10;
+}
+
+.panelBox{
+    position: absolute;
+    top:15rpx;
+    left:10rpx;
+    z-index: 20;
+    width:730rpx;
+    height:310rpx;
+    overflow: hidden;
+}
+
+.panelBox .panel-img{
+    float: left;
+    /*width:300rpx;*/
+    /*height: 310rpx;*/
+    /*background-color: green;*/
+}
+
+.panelBox .pannelRit{
+    float: right;
+    text-align: center;
+}
+
+.panelBox .pannel-title{
+    line-height: 46rpx;
+    font-size: 44rpx;
+    margin:50rpx 0 12rpx;
+}
+
+.panelBox .pannel-txt{
+    line-height: 30rpx;
+    font-size: 20rpx;
+}
+
+.pannel-consulting{
+    margin:24rpx auto 0;
+    width:180rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+}
+
+

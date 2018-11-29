@@ -1,0 +1,61 @@
+/*dibu*/
+.tabar_twoBox{
+    height: 130rpx;
+}
+.tabar_two{
+    background-color: #fff;
+    color:#909090;
+    font-size: 24rpx;
+    width:100%;
+    border-top: 2rpx solid #edecec;
+    height: 128rpx;
+    position: fixed;
+    z-index: 999;
+    left:0;
+    bottom: 0;
+    overflow: visible;
+}
+.tabLeft,.tabRig,.tabCen{
+    text-align: center;
+    padding-top: 22rpx;
+}
+
+.tabBtImg{
+    width: 48rpx;
+    height: 50rpx;
+}
+
+.tabCsImg{
+    width: 172rpx;
+    height: 108rpx;
+}
+
+.tabLeft image,.tabRig image,.tabCen image{
+    margin-bottom: 8rpx;
+}
+
+.tabCen{
+    margin-top: -58rpx;
+}
+
+.cancel_default{
+    background-color:transparent;
+    color:#909090;
+    font-size:24rpx;
+}
+
+.cancel_default::after{
+    border:none;
+    border:0 solid rgba(255, 255,255, 0);
+    border-width: 0;
+}
+
+.tabar_active{
+    color: #0078ff;
+}
+
+button {
+    line-height:1.75;
+    -webkit-tap-highlight-color:transparent;
+    overflow:hidden;
+}

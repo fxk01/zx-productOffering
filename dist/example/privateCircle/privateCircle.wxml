@@ -1,0 +1,89 @@
+<view class="container">
+    <!--引用积募头部-->
+    <import src="../template/jMheader/jMheader.wxml" />
+    <template is="jm_header" data="{{jMhidden: true}}"/>
+    <view class="torialLine"></view>
+
+    <view class="design_con">
+        <view class="con_top">
+            积募圈是旨在为资管行业相关人士提供行业互动、资源对接、政策互通、福利共享的互动微信群。
+        </view>
+        <view class="design_conTitBox">
+            <!--<text class="design_conTit">入群您可以获得</text>-->
+        </view>
+        <view class="flex con_achieveBox">
+            <view class="flex-1 achieveBox">
+                <image src="../images/design_zx.png" mode="aspectFit"></image>
+                <view class="design_conSub">资讯</view>
+                <view class="design_conDetail">实时行业资讯</view>
+            </view>
+            <view class="flex-1 achieveBox">
+                <image src="../images/design_jd.png" mode="aspectFit"></image>
+                <view class="design_conSub">解读</view>
+                <view class="design_conDetail">深度政策新规解读</view>
+            </view>
+        </view>
+
+        <view class="flex con_achieveBox">
+            <view class="flex-1 achieveBox">
+                <image src="../images/design_zy.png" mode="aspectFit"></image>
+                <view class="design_conSub">资源</view>
+                <view class="design_conDetail">同业/异业资源接洽</view>
+            </view>
+            <view class="flex-1 achieveBox">
+                <image src="../images/design_fl.png" mode="aspectFit"></image>
+                <view class="design_conSub">福利</view>
+                <view class="design_conDetail">独家免费模板视频教程等</view>
+            </view>
+        </view>
+
+        <view class="design_conTitBox">
+            <text class="design_conTit">积募的小圈儿</text>
+        </view>
+
+        <view class="flex con_circleBox">
+            <view class="flex-1 circleBox">
+                <view class="circle_Tit">行业类</view>
+                <view class="circle_Sub">
+                    <view class="circle_Txt">产业基金圈</view>
+                    <view class="circle_Txt">股权投资圈</view>
+                    <view class="circle_Txt">证券投资圈</view>
+                    <view class="circle_Txt">海外基金圈</view>
+                    <view class="circle_Txt">资管运营圈</view>
+                </view>
+            </view>
+
+            <view class="flex-1 circleBox">
+                <view class="circle_Tit">资讯类</view>
+                <view class="circle_Sub">
+                    <view class="circle_Txt">资源对接圈</view>
+                    <view class="circle_Txt">政策解读圈</view>
+                </view>
+            </view>
+
+            <view class="flex-1 circleBox">
+                <view class="circle_Tit">福利类</view>
+                <view class="circle_Sub">
+                    <view class="circle_Txt">资料福利圈</view>
+                    <view class="circle_Txt">线下私享会</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="design_conTitBox">
+            <text class="design_conTit">加入我们</text>
+        </view>
+        <view class="design_mess" style="color:#5993f5;">
+            您可以实时关注积募微信公众号
+            <!--点击 "<text style="color:#5993f5;">立即入群</text>"，回复想要加入的群名，即刻入群！-->
+        </view>
+    </view>
+
+    <!--<view class="questBtnbox">-->
+        <!--<button class="questionBtn1" open-type="contact" session-from="weapp">-->
+            <!--<view class="Btn_txt">立即入群</view>-->
+        <!--</button>-->
+    <!--</view>-->
+
+
+</view>

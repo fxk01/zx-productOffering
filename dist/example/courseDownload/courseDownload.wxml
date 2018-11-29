@@ -1,0 +1,62 @@
+<view hidden="{{!displayPage}}">
+    <view class="flex flex-align-center loadHeader">
+        <image src="../images/lettle.png" class="head_bg"></image>
+        <view class="head_R">
+            <view class="headR_title">请留下您的联系信息</view>
+            <view class="headR_txt">稍后积募小管家会将课件发送给您</view>
+        </view>
+    </view>
+    <view class="loadMain">
+        <view class="main_title">*为必填项</view>
+        <!--<view class="min_contentWrap">-->
+            <view class="flex flex-align-center min_contentBox {{emailIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">邮箱地址*</view>
+                    <input class="flex-1 contentVal" bindfocus="emailfocusFn" bindblur="emailblurFn"  placeholder="{{emailIsChange?'请输入您的邮箱':''}}"/>
+                <!--</view>-->
+                <view hidden="{{emailIsChange}}" class="message">请填写正确的邮箱</view>
+            </view>
+
+            <view class="flex flex-align-center min_contentBox {{phoneIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">手机号码*</view>
+                    <input class="flex-1 contentVal" bindfocus="phonefocusFn" bindblur="phoneblurFn" placeholder="{{phoneIsChange?'请输入您的手机号':''}}"/>
+                <!--</view>-->
+                <view class="message" hidden="{{phoneIsChange}}">请填写正确的手机号</view>
+            </view>
+
+            <view class="flex flex-align-center min_contentBox {{addrIsChange?'':'min_contentBoxBg'}}">
+                <!--<view class="flex flex-align-center">-->
+                    <view class="contentName">公司名称*</view>
+                    <input class="flex-1 contentVal"  bindfocus="addrfocusFn" bindblur="addrblurFn" placeholder="{{addrIsChange?'请输入您的公司名称':''}}"/>
+                <!--</view>-->
+                <view hidden="{{addrIsChange}}" class="message">请填写正确的公司名称</view>
+            </view>
+        <!--</view>-->
+        <!--<view class="min_duty">-->
+            <view class="flex flex-align-center min_contentBox">
+                <!--<view class="flex flex-align-center">-->
+                    <view bindfocus="dutyfocusFn" bindblur="dutyblurFn" class="contentName">职务</view>
+                    <input class="flex-1 contentVal" placeholder="请输入您的职务"/>
+                <!--</view>-->
+                <!--<view class="message">请填写正确的职务</view>-->
+            </view>
+        <!--</view>-->
+    </view>
+    <loading hidden="{{loadingHidden}}">
+        正在提交中...
+    </loading>
+    <button class="resultBtn" disabled="{{disableBool}}" catchtap="blockPageFn">提交</button>
+</view>
+
+
+
+<!--购买成功-->
+<view hidden="{{displayPage}}" class="successBox">
+    <view class="success_Result">
+        <image src="../images/download_success.png" class="result_Img"></image>
+        <view class="result_TxtBg">提交成功</view>
+        <view>课件已发送到您的邮箱！</view>
+    </view>
+    <button class="resultBtn" catchtap="goDryGoodsPage">查看更多积募干货资料</button>
+</view>

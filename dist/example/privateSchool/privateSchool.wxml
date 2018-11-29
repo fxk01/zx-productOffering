@@ -1,0 +1,106 @@
+<view class="page">
+    <import src="../wxParse/wxParse.wxml"/>
+    <import src="../template/loadmore/loadmore.wxml" />
+    <!--引用积募头部-->
+    <import src="../template/jMheader/jMheader.wxml" />
+    <template is="jm_header" data="{{jMhidden: true}}"/>
+
+    <view class="jmProfile">
+        <view class="line_bm"></view>
+        <!--&lt;!&ndash;含html标签&ndash;&gt;-->
+        <!--<block wx:for="{{replyTemArray}}" wx:key="*this">-->
+           <!--<template is="wxParse" data="{{wxParseData:item}}"/>-->
+        <!--</block>-->
+        <!--<view>-->
+            <!--<template is="zan-loadmore" data="{{...zanObj}}" />-->
+        <!--</view>-->
+
+        <!--<view class="line_e"></view>-->
+        <view class="private_conbox">
+            <view class="private_conTit">机构服务</view>
+            <view class="private_conSub">省心创设</view>
+            <view class="private_conDentail">
+                <text>工商注册</text><text>|</text>
+                <text>财税社保</text><text>|</text>
+                <text>验资审计</text><text>|</text>
+                <text>法律顾问</text><text>|</text>
+                <text>品牌设计</text><text>|</text>
+                <text>合规官网</text><text>|</text>
+            </view>
+            <view class="private_conSub">管理人备案</view>
+            <view class="private_conDentail">
+                <text>备案辅导 </text><text>|</text>
+                <text>内控制度</text><text>|</text>
+                <text>商业计划书</text><text>|</text>
+                <text>法律意见书</text><text>|</text>
+                <text>年审年检</text><text>|</text>
+                <text>入会服务</text><text>|</text>
+            </view>
+            <view class="private_conSub">资源整合</view>
+            <view class="private_conDentail">
+                <text>政策咨询</text><text>|</text>
+                <text>资源引介</text><text>|</text>
+                <text>税务筹划</text><text>|</text>
+                <text>项目退出</text><text>|</text>
+            </view>
+
+            <view class="private_conTit">产品服务</view>
+            <view class="private_conSub">产品设计</view>
+            <view class="private_conDentail">
+                <text>项目尽调筛选</text><text>|</text>
+                <text>交易结构设计</text><text>|</text>
+                <text>收益分配方案</text><text>|</text>
+                <text>风控方案制定</text><text>|</text>
+                <text>合同协议拟定</text><text>|</text>
+                <text>产品备案</text><text>|</text>
+                <text>退出税务筹划</text><text>|</text>
+            </view>
+            <view class="private_conSub">合规募集</view>
+            <view class="private_conDentail">
+                <text>合规募集指导</text><text>|</text>
+                <text>投资者适当性</text><text>|</text>
+                <text>合格投资者评估</text><text>|</text>
+                <text>双录回访合规信披官网</text><text>|</text>
+                <text>路演推介材料</text><text>|</text>
+            </view>
+            <view class="private_conSub">运营管理</view>
+            <view class="private_conDentail">
+                <text>发行对接</text><text>|</text>
+                <text>份额登记</text><text>|</text>
+                <text>运营估值</text><text>|</text>
+                <text>业绩分析</text><text>|</text>
+                <text>监管信披</text><text>|</text>
+                <text>投资者服务</text><text>|</text>
+            </view>
+
+            <view class="private_conTit">职业培训服务</view>
+            <view class="private_conSub">积募研习社</view>
+            <view class="private_conDentail">
+                <view>
+                    <text>线上职业课</text><text>|</text>
+                    <text>线下私享会</text>
+                </view>
+
+                <view>
+                    <text>热点公开课</text><text>|</text>
+                    <text>企业内训定制</text>
+                </view>
+
+            </view>
+        </view>
+
+        <image class="jjie_big" src="https://wechat.hefupb.com/images/jianjie-bg.png"></image>
+    </view>
+
+
+    <!--引用公共底部 服务热线-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--我要咨询-->
+    <!--<view style="height: 126rpx;">-->
+        <!--<button open-type="contact" session-from="weapp" class="consultBox">-->
+            <!--<view class="consult_txt">我要咨询</view>-->
+        <!--</button>-->
+    <!--</view>-->
+</view>

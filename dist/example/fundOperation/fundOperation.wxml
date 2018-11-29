@@ -1,0 +1,177 @@
+<view class="container">
+    <view class="deal-thumb operation_thumb" bindtap="Gofillinformation">
+        <image class="deal-img" src="../images/deal.png" mode="aspectFill"></image>
+    </view>
+    <view class="ope_header">
+        <view class="head_title">积募运营专家</view>
+        <view class="head_txt">为您提供产品设计及运营一站服务</view>
+        <view class="flex  headConbox">
+            <view class="flex-1 headCon">
+                <view class="headconChoice headconPosi1">
+                    <image src="../images/jm_opeicon1.png" mode="aspectFill"></image>
+                    <view class="headconTxt">行业专业团队</view>
+                </view>
+            </view>
+
+            <view class="flex-1 headCon">
+                <view class="headconChoice headconPosi2">
+                    <image src="../images/jm_opeicon2.png" mode="aspectFill"></image>
+                    <view class="headconTxt">贴心解决方案</view>
+                </view>
+            </view>
+
+            <view class="flex-1 headCon">
+                <view class="headconChoice">
+                    <image src="../images/jm_opeicon3.png" mode="aspectFill"></image>
+                    <view class="headconTxt">多维度全面分析</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="ope_center">
+        <view class="flex flex-align-center cen_box">
+            <image class="cen_L" style="margin-top:26rpx;height:294rpx;" src="https://wechat.hefupb.com/images/yuny_sj_icon.png" mode="aspectFit"></image>
+            <view class="flex-1 cen_R">
+                <view class="cen_title">产品类型</view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">平层基金</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">FOF/MOM基金</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">主从基金</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">费用/收益分级基金 </text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">QDII/QDLP</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">资产证券化</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">PPP项目</text>
+                </view>
+            </view>
+        </view>
+        <view class="flex flex-align-center cen_box">
+            <image class="cen_L" src="https://wechat.hefupb.com/images/yuny_zx_icon.png" mode="aspectFit"></image>
+            <view class="flex-1 cen_R">
+                <view class="cen_title">标的类型</view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">A股、H股、港股通、新三板</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">交易所挂牌的债券、基金、ABS</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">银行间市场、中证机构间报价系统交易的债券PPN、ABS、同业存单</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">债权计划</text>
+                </view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">收益权转让</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">期货、大宗商品、贵金属</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">利率互换</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">个股期权</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="flex flex-align-center cen_box">
+            <image class="cen_L"  src="https://wechat.hefupb.com/images/yuny_yj_icon.png" mode="aspectFit"></image>
+            <view class="flex-1 cen_R">
+                <view class="cen_title">个性化服务</view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">基金费用计算</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">多种业绩报酬计算</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">ABS收益分配</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">股权退出收益计算</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">多维度绩效分析</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="flex flex-align-center cen_box">
+            <image class="cen_L" src="https://wechat.hefupb.com/images/yuny_ht_icon.png" mode="aspectFit"></image>
+            <view class="flex-1 cen_R">
+                <view class="cen_title">定制化报告</view>
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">监管信息披露</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">投资人信披服务</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">管理人综合持仓报告</text>
+                </view>
+
+                <view class="flex cen_detail">
+                    <image src="../images/gou.png"></image>
+                    <text class="flex-1">定制化绩效报告</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+    <!--引用公共底部-->
+    <import src="../template/allbom.wxml" />
+    <template is="allBom" />
+
+    <!--boom-->
+    <!--<import src="../template/bar1/bar1.wxml" />-->
+    <!--<template is="bar1" data="{{btnTxt: '在线咨询',btnClass:'operation_consult'}}"/>-->
+</view>
