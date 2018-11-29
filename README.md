@@ -7,6 +7,11 @@ WeUI for 小程序 为微信小程序量身设计
 
 ## 概述
 
+
+私研社 old appid：wx35d73b2c72b79ce3   new appid: wxe875453bd251d5b4 
+资晓  appid:wx364d971537a52b4a
+私募小管家  wx79e5625ad42911f7
+
 [WeUI](https://github.com/weui/weui) 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。包含`button`、`cell`、`dialog`、 `progress`、 `toast`、`article`、`actionsheet`、`icon`等各式元素。
 
 
